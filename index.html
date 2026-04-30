@@ -193,7 +193,20 @@ section{padding:3.5rem 4vw;}
 }
 
 /* ── WHO WE SERVE ── */
-.serve-band{background:var(--panel);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);}
+.serve-band{
+  position:relative;
+  background:var(--panel);
+  border-top:1px solid var(--gold-dim);
+  border-bottom:1px solid var(--gold-dim);
+  overflow:hidden;
+}
+.serve-band::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1536240478700-b869ad10e097?w=1600&q=40&fit=crop');
+  background-size:cover;background-position:center 30%;
+  opacity:.04;pointer-events:none;
+  filter:grayscale(1);
+}
 .serve-inner{text-align:center;padding:3rem 4vw;max-width:1100px;margin:0 auto;}
 .serve-quote{
   font-family:'Playfair Display',serif;
@@ -302,7 +315,19 @@ blockquote.pull{
 .spot-tag{display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;background:var(--gold);color:var(--black);padding:.25rem .7rem;margin-bottom:.9rem;font-family:'DM Sans',sans-serif;}
 
 /* ── SOCIAL SECTION ── */
-.social-section{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 4vw;text-align:center;}
+.social-section{
+  background:var(--dark);
+  border-top:1px solid var(--gold-dim);
+  padding:3rem 4vw;text-align:center;
+  position:relative;overflow:hidden;
+}
+.social-section::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=30&fit=crop');
+  background-size:cover;background-position:center;
+  opacity:.04;filter:grayscale(1);
+}
+.social-section>*{position:relative;z-index:1;}
 .social-platforms{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;margin:1.8rem 0;}
 .soc-btn{
   display:inline-flex;align-items:center;gap:.75rem;
@@ -426,7 +451,23 @@ blockquote.pull{
 .gold-strip p{font-size:.88rem;color:rgba(0,0,0,.5);max-width:420px;margin:0 auto 2.5rem;line-height:1.9;}
 
 /* ── MAILING ── */
-.mail-strip{text-align:center;padding:3rem 4vw;background:var(--panel);border-top:1px solid var(--gold-dim);}
+.mail-strip{
+  text-align:center;padding:3rem 4vw;
+  background:var(--panel);
+  border-top:1px solid var(--gold-dim);
+  position:relative;overflow:hidden;
+}
+.mail-strip::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 80px,
+      rgba(201,168,76,.01) 80px,
+      rgba(201,168,76,.01) 81px
+    );
+}
 .mail-form{display:flex;max-width:460px;margin:3rem auto 0;}
 .mail-form input{
   flex:1;background:transparent;
@@ -511,7 +552,21 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 .community-card{
   background:var(--black);padding:2.4rem 1.8rem;
   transition:background .25s;text-align:left;
+  position:relative;overflow:hidden;
 }
+.community-card::after{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:0;
+  transition:opacity .4s;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 8px,
+      rgba(201,168,76,.025) 8px,
+      rgba(201,168,76,.025) 9px
+    );
+}
+.community-card:hover::after{opacity:1;}
 .community-card:hover{background:var(--panel);}
 .community-card-num{
   display:block;font-family:'Playfair Display',serif;
@@ -540,6 +595,19 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 .tda-left{
   padding:4.5rem 4vw;border-right:1px solid var(--gold-dim);
   display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.tda-left::before{
+  content:'';position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 3px,
+      rgba(201,168,76,.012) 3px,
+      rgba(201,168,76,.012) 4px
+    );
+  pointer-events:none;
 }
 .tda-right{padding:4.5rem 4vw;background:var(--panel);}
 .tda-mantra{
@@ -602,7 +670,15 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   border-top:1px solid var(--gold-dim);
   border-bottom:1px solid var(--gold-dim);
   padding:5rem 4vw;
+  position:relative;overflow:hidden;
 }
+.impact-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1600&q=35&fit=crop');
+  background-size:cover;background-position:center;
+  opacity:.035;filter:grayscale(1);pointer-events:none;
+}
+.impact-section .impact-inner{position:relative;z-index:1;}
 .impact-inner{max-width:1100px;margin:0 auto;}
 .impact-metrics{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -639,6 +715,18 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 /* ── BLOG SECTION LAYOUT ── */
 .blog-section{
   padding:5rem 4vw;background:var(--dark);
+  position:relative;overflow:hidden;
+}
+.blog-section::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(201,168,76,.008) 60px,
+      rgba(201,168,76,.008) 61px
+    );
 }
 .blog-header{
   display:flex;justify-content:space-between;
@@ -801,7 +889,15 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   background:var(--black);
   border-top:1px solid var(--gold-dim);
   padding:5rem 4vw;
+  position:relative;overflow:hidden;
 }
+.testimonial-strip::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1600&q=35&fit=crop');
+  background-size:cover;background-position:center 40%;
+  opacity:.045;filter:grayscale(1);pointer-events:none;
+}
+.testimonial-inner{position:relative;z-index:1;}
 .testimonial-inner{max-width:1100px;margin:0 auto;}
 .testimonial-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -993,6 +1089,48 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   .prog-cta-box{padding:2.5rem 1.5rem;}
 }
 
+
+/* ── TESTIMONIAL AVATARS ── */
+.testimonial-avatar-wrap{
+  position:relative;
+  display:inline-flex;align-items:center;
+  margin-bottom:1.4rem;gap:0;
+}
+.testimonial-avatar{
+  width:52px;height:52px;
+  border-radius:50%;
+  object-fit:cover;object-position:center top;
+  border:2px solid var(--gold-dim);
+  display:block;
+}
+.testimonial-avatar-placeholder{
+  width:52px;height:52px;
+  border-radius:50%;
+  background:var(--panel);
+  border:2px solid var(--gold-dim);
+  display:none;
+  align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:.8rem;color:rgba(201,168,76,.4);
+  font-style:italic;
+}
+.testimonial-verified{
+  position:absolute;
+  bottom:-2px;right:-4px;
+  width:18px;height:18px;
+  background:var(--gold);
+  border-radius:50%;
+  font-size:.55rem;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--black);font-weight:700;
+  border:2px solid var(--black);
+}
+.testimonial-card{
+  background:var(--dark);
+  padding:2.5rem 2rem;
+  transition:background .25s;
+}
+
 </style>
 </head>
 <body>
@@ -1068,7 +1206,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       </div>
       <!-- Slot 2 — community event -->
       <div class="gallery-slide">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&fit=crop" alt="Community gathering">
+        <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Made In Black Studios — community">
         <div class="gallery-caption">Community Screening</div>
       </div>
       <!-- Slot 3 — behind the scenes -->
@@ -1078,7 +1216,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       </div>
       <!-- Slot 4 — workshop moment -->
       <div class="gallery-slide">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&fit=crop" alt="Workshop in progress">
+        <img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Filmmaking craft — Made In Black Studios">
         <div class="gallery-caption">Mentorship Programme</div>
       </div>
       <!-- Slot 5 — screening -->
@@ -1088,12 +1226,12 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       </div>
       <!-- Slot 6 — documentary still -->
       <div class="gallery-slide">
-        <img src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=800&q=80&fit=crop" alt="Documentary filmmaking">
+        <img src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&q=80&fit=crop" alt="Documentary filmmaking">
         <div class="gallery-caption">Documentary Practice</div>
       </div>
       <!-- Slot 7 — people moment -->
       <div class="gallery-slide">
-        <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&q=80&fit=crop" alt="Creatives collaborating">
+        <img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Filmmakers collaborating">
         <div class="gallery-caption">Creative Collaboration</div>
       </div>
       <!-- Slot 8 — repeat for seamless loop -->
@@ -1102,7 +1240,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         <div class="gallery-caption">ShootYourShort — Session 1</div>
       </div>
       <div class="gallery-slide">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80&fit=crop" alt="Community gathering">
+        <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Made In Black Studios — community">
         <div class="gallery-caption">Community Screening</div>
       </div>
     </div>
@@ -1181,7 +1319,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 
   <!-- ── FLAGSHIP PROGRAMME: SHOOT YOUR SHORT ──────────────────────────────── -->
   <div class="flagship-band fade-in">
-    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1600&q=80&fit=crop" alt="Filmmaker with camera on set">
+    <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530597/LAT00211_qmffrq.jpg" alt="Made In Black Studios — ShootYourShort on set">
     <div class="flagship-overlay"></div>
     <div class="flagship-content">
       <div class="flagship-text">
@@ -1249,9 +1387,17 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   <!-- ── TESTIMONIALS ─────────────────────────────────────────────────────── -->
   <div class="testimonial-strip fade-in">
     <div class="testimonial-inner">
-      <span class="lbl" style="text-align:center;display:block;margin-bottom:2.5rem;">What People Say</span>
+      <span class="lbl" style="text-align:center;display:block;margin-bottom:.6rem;">What People Say</span>
+      <p style="text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);font-family:'DM Sans',sans-serif;margin-bottom:3rem;letter-spacing:.06em;">Real voices from our community. <span style="color:rgba(201,168,76,.4);">More coming soon.</span></p>
       <div class="testimonial-grid">
         <div class="testimonial-card">
+          <div class="testimonial-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=120&q=80&fit=crop&crop=face" alt="Programme participant" class="testimonial-avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="testimonial-avatar-placeholder">
+              <span>01</span>
+            </div>
+            <span class="testimonial-verified">✓</span>
+          </div>
           <div class="testimonial-quote">"For the first time, I held a professional camera and understood how to use it. Made In Black Studios didn't just teach me filmmaking — they showed me this industry was built for people like me too."</div>
           <div class="testimonial-attr">
             <span class="testimonial-name">Programme Participant</span>
@@ -1259,6 +1405,13 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           </div>
         </div>
         <div class="testimonial-card">
+          <div class="testimonial-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&q=80&fit=crop&crop=face" alt="Migrant filmmaker" class="testimonial-avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="testimonial-avatar-placeholder">
+              <span>02</span>
+            </div>
+            <span class="testimonial-verified">✓</span>
+          </div>
           <div class="testimonial-quote">"As a migrant filmmaker starting over, I felt invisible in the UK industry. This community gave me back my confidence and my network. I went from isolated to connected in a matter of weeks."</div>
           <div class="testimonial-attr">
             <span class="testimonial-name">Migrant Filmmaker</span>
@@ -1266,6 +1419,13 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           </div>
         </div>
         <div class="testimonial-card">
+          <div class="testimonial-avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80&fit=crop&crop=face" alt="MIB Screenings attendee" class="testimonial-avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="testimonial-avatar-placeholder">
+              <span>03</span>
+            </div>
+            <span class="testimonial-verified">✓</span>
+          </div>
           <div class="testimonial-quote">"The screening was unlike anything I'd experienced. A room full of people who looked like me, watching work that looked like our lives. That matters more than I can say."</div>
           <div class="testimonial-attr">
             <span class="testimonial-name">MIB Screenings Attendee</span>
@@ -1296,7 +1456,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80&fit=crop" alt="Filmmaking"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Cinematography tutorial"></div>
         <div class="blog-body">
           <span class="blog-tag">Tutorial</span>
           <h3>Cinematography Fundamentals for Emerging Filmmakers</h3>
@@ -1305,7 +1465,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1505236273191-1dce886b01e9?w=600&q=80&fit=crop" alt="Insight"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop" alt="Industry notes"></div>
         <div class="blog-body">
           <span class="blog-tag">Insight</span>
           <h3>Navigating the UK Film Industry as a Migrant Creative</h3>
@@ -1388,7 +1548,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 <div id="page-about" class="page">
 
   <div class="page-hero" style="min-height:500px;">
-    <div class="bg"><img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1600&q=80&fit=crop" alt="Cinema"></div>
+    <div class="bg"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531391/Still_2025-09-18_122650_1.1.21_p2ufen.jpg" alt="Home Away — Made In Black Studios documentary"></div>
     <div class="over"></div>
     <div class="txt">
       <span class="lbl">Our Story</span>
@@ -1453,10 +1613,10 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     <span class="lbl" style="display:block;text-align:center;">Documentary</span>
     <h2 class="sh" style="margin-bottom:1rem;">Home Away</h2>
     <p class="body-copy" style="max-width:560px;margin:0 auto 2.5rem;">Home Away explores migration, identity and belonging, and sits at the heart of why Made In Black Studios exists.</p>
-    <div class="doc-embed-placeholder">
-      <div class="doc-embed-inner">
+    <div class="doc-embed-placeholder" style="background-image:url('https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531390/5_ndtxgg.jpg');background-size:cover;background-position:center;">
+      <div class="doc-embed-inner" style="background:rgba(8,8,8,.45);padding:2.5rem 3rem;border-radius:2px;">
         <span class="doc-play">▶</span>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.8rem;font-family:'DM Sans',sans-serif;letter-spacing:.06em;">Watch Home Away</p>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.65);margin-top:.8rem;font-family:'DM Sans',sans-serif;letter-spacing:.06em;font-weight:500;">Watch Home Away</p>
       </div>
     </div>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;">
@@ -1472,10 +1632,10 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     <div class="bts-grid">
       <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530588/IMG_5131_1_njkbrk.jpg" alt="Made In Black Studios — film set"><div class="bts-cap">Film Set</div></div>
       <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530588/IMG_5131_1_njkbrk.jpg" alt="Behind the camera — Made In Black Studios"><div class="bts-cap">Camera Work</div></div>
-      <div class="bts-img"><img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&q=80&fit=crop" alt="Post production"><div class="bts-cap">Post Production</div></div>
-      <div class="bts-img"><img src="https://images.unsplash.com/photo-1608734265656-a1a5d58d65ef?w=600&q=80&fit=crop" alt="Workshop"><div class="bts-cap">Workshops</div></div>
-      <div class="bts-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80&fit=crop" alt="Community"><div class="bts-cap">Community</div></div>
-      <div class="bts-img"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=600&q=80&fit=crop" alt="Documentary"><div class="bts-cap">Documentary</div></div>
+      <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531391/Still_2025-09-18_122650_1.1.21_p2ufen.jpg" alt="Home Away — post production"><div class="bts-cap">Post Production</div></div>
+      <div class="bts-img"><img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Filmmaking workshop"><div class="bts-cap">Workshops</div></div>
+      <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Made In Black Studios — community"><div class="bts-cap">Community</div></div>
+      <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531391/Still_2025-09-18_122650_1.1.21_p2ufen.jpg" alt="Home Away documentary"><div class="bts-cap">Documentary</div></div>
     </div>
   </section>
 
@@ -1498,7 +1658,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 <div id="page-programmes" class="page">
 
   <div class="page-hero" style="min-height:500px;">
-    <div class="bg"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530602/LAT00121_yqumz4.jpg" alt="Made In Black Studios — on set"></div>
+    <div class="bg"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1600&q=80&fit=crop" alt="Made In Black Studios — filmmakers on set"></div>
     <div class="over"></div>
     <div class="txt">
       <span class="lbl">Programmes</span>
@@ -1510,7 +1670,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 
   <!-- FLAGSHIP: SHOOT YOUR SHORT -->
   <div class="flagship-band" style="min-height:600px;">
-    <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530602/LAT00121_yqumz4.jpg" alt="ShootYourShort — Made In Black Studios on set, Manchester">
+    <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530597/LAT00211_qmffrq.jpg" alt="ShootYourShort — Made In Black Studios on set, Manchester">
     <div class="flagship-overlay"></div>
     <div class="flagship-content">
       <div class="flagship-text">
@@ -1548,7 +1708,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
     <div class="prog-grid">
       <div class="prog-card">
-        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80&fit=crop" alt="Mentorship"></div>
+        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop" alt="Mentorship programme"></div>
         <div class="prog-body">
           <span class="prog-cat">Development</span>
           <h3>Mentorship &amp; Career Pathways</h3>
@@ -1556,7 +1716,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&q=80&fit=crop" alt="Production"></div>
+        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?w=600&q=80&fit=crop" alt="Film production"></div>
         <div class="prog-body">
           <span class="prog-cat">Production</span>
           <h3>Film Production Support</h3>
@@ -1564,7 +1724,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=600&q=80&fit=crop" alt="Schools"></div>
+        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=600&q=80&fit=crop" alt="Schools partnership"></div>
         <div class="prog-body">
           <span class="prog-cat">Education</span>
           <h3>Schools &amp; College Partnerships</h3>
@@ -1572,7 +1732,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="prog-card">
-        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&fit=crop&crop=face" alt="Spotlight"></div>
+        <div class="prog-img-slot"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop&crop=face" alt="MIB Spotlight — talent discovery"></div>
         <div class="prog-body">
           <span class="prog-cat">Discovery</span>
           <h3>MIB Spotlight</h3>
@@ -1610,7 +1770,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     <h2 class="sh">What's Screening</h2>
     <div class="screen-grid">
       <div class="screen-card">
-        <div class="screen-img"><img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80&fit=crop" alt="Screening"><span class="screen-badge">Coming Soon</span></div>
+        <div class="screen-img"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80&fit=crop" alt="MIB Screening"><span class="screen-badge">Coming Soon</span></div>
         <div class="screen-body">
           <h4>Made In Black Screenings Launch Edition</h4>
           <p>Our inaugural community screening event. Films by Black filmmakers across Greater Manchester and beyond. Q&amp;A, networking and celebration. Get on the list.</p>
@@ -1626,7 +1786,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="screen-card">
-        <div class="screen-img"><img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80&fit=crop" alt="Community"></div>
+        <div class="screen-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="MIB Screenings community"></div>
         <div class="screen-body">
           <h4>Community &amp; School Screenings</h4>
           <p>Touring editions taking Made In Black Screenings to schools, libraries and community venues across Greater Manchester. Accessible and free to attend.</p>
@@ -1680,7 +1840,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="infocus-img">
-        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&fit=crop&crop=face" alt="In Focus filmmaker portrait">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop&crop=face" alt="In Focus — filmmaker portrait">
         <div class="infocus-img-overlay">
           <span class="spot-tag">In Focus — May 2026</span>
           <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.4rem;">First profile coming soon</p>
@@ -1710,7 +1870,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80&fit=crop" alt="Tutorial"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Cinematography tutorial"></div>
         <div class="blog-body">
           <span class="blog-tag">Tutorial</span>
           <h3>Cinematography Fundamentals for Emerging Filmmakers</h3>
@@ -1719,7 +1879,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1505236273191-1dce886b01e9?w=600&q=80&fit=crop" alt="Industry"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop" alt="Industry notes"></div>
         <div class="blog-body">
           <span class="blog-tag">Industry Notes</span>
           <h3>Navigating the UK Film Industry as a Migrant Creative</h3>
@@ -1728,7 +1888,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80&fit=crop" alt="Community"></div>
+        <div class="blog-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Community stories"></div>
         <div class="blog-body">
           <span class="blog-tag">Community Stories</span>
           <h3>BFI Funding for Black Filmmakers — A Plain English Guide</h3>
@@ -1737,7 +1897,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=600&q=80&fit=crop" alt="Reflection"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop&crop=face" alt="Migration and creativity reflection"></div>
         <div class="blog-body">
           <span class="blog-tag">Reflection</span>
           <h3>Migration, Creativity and Starting Over</h3>
@@ -1746,7 +1906,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=600&q=80&fit=crop" alt="Training"></div>
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1608734265656-a1a5d58d65ef?w=600&q=80&fit=crop" alt="Filmmaking training"></div>
         <div class="blog-body">
           <span class="blog-tag">Opportunities</span>
           <h3>Free &amp; Low-Cost Filmmaking Training in Manchester</h3>
@@ -1850,7 +2010,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   <!-- VISUAL STRIP — image moments -->
   <div class="gi-image-strip">
     <div class="gi-img-block"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530602/LAT00121_yqumz4.jpg" alt="Made In Black Studios — training on set"><div class="gi-img-cap">Training</div></div>
-    <div class="gi-img-block"><img src="https://images.unsplash.com/photo-1608734265656-a1a5d58d65ef?w=600&q=80&fit=crop" alt="Workshop"><div class="gi-img-cap">Workshops</div></div>
+    <div class="gi-img-block"><img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Filmmaking workshop"><div class="gi-img-cap">Workshops</div></div>
     <div class="gi-img-block"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80&fit=crop" alt="Screening"><div class="gi-img-cap">Screenings</div></div>
     <div class="gi-img-block"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530588/IMG_5131_1_njkbrk.jpg" alt="Made In Black Studios — behind the scenes"><div class="gi-img-cap">Behind the Scenes</div></div>
   </div>

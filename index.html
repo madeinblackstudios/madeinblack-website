@@ -20,7 +20,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1;}
+body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.6;}
 h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;}
 em{font-style:italic;}
 img{display:block;width:100%;height:100%;object-fit:cover;}
@@ -179,7 +179,7 @@ nav{
    GLOBAL TYPOGRAPHY & LAYOUT
    ========================= */
 /* ── GLOBAL SECTION SYSTEM ── */
-section{padding:3.5rem 4vw;}
+section{padding:5rem 5vw;}
 .sec-center{text-align:center;}
 .sec-left{text-align:left;}
 .lbl{
@@ -189,17 +189,18 @@ section{padding:3.5rem 4vw;}
   font-family:'DM Sans',sans-serif;
 }
 .sh{
-  font-size:clamp(1.9rem,3vw,2.8rem);
-  font-weight:700;line-height:1.08;
+  font-size:clamp(2rem,3.2vw,3rem);
+  font-weight:700;line-height:1.06;
   color:var(--white);font-family:'Playfair Display',serif;
+  letter-spacing:-.01em;
 }
 .sh em{font-style:italic;color:var(--gold);}
 .sh-xl{font-size:clamp(2.8rem,4.5vw,4.2rem);line-height:1.04;font-weight:900;}
 .divider{width:32px;height:1px;background:var(--gold);margin:1.2rem auto;opacity:.7;}
 .divider-left{margin:2rem 0;}
 .body-copy{
-  font-size:.93rem;line-height:1.75;color:var(--muted);
-  font-weight:300;max-width:720px;
+  font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.6);
+  font-weight:300;max-width:640px;
   margin-left:auto;margin-right:auto;
   font-family:'DM Sans',sans-serif;letter-spacing:.01em;
 }
@@ -426,7 +427,7 @@ blockquote.pull{
 .soc-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.05);}
 .soc-btn svg{width:16px;height:16px;fill:currentColor;flex-shrink:0;}
 .soc-btn.ig:hover{color:#E1306C;border-color:#E1306C;}
-.soc-btn.tt:hover{color:#ffffff;border-color:rgba(255,255,255,.5);}
+.soc-btn.tt:hover{color:#ffffff;border-color:rgba(255,255,255,.65);}
 .soc-btn.fb:hover{color:#4C8FE0;border-color:#4C8FE0;}
 .soc-btn.yt:hover{color:#FF3B30;border-color:#FF3B30;}
 .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem;margin-top:1.5rem;max-width:1100px;margin-left:auto;margin-right:auto;}
@@ -525,7 +526,7 @@ blockquote.pull{
   border-left:2px solid rgba(201,168,76,.3);
   padding:1.4rem 2rem;margin-top:0;margin-bottom:2rem;text-align:left;
 }
-.funder-box p{font-size:.85rem;line-height:2;color:rgba(255,255,255,.45);font-weight:300;}
+.funder-box p{font-size:.85rem;line-height:2;color:rgba(255,255,255,.62);font-weight:300;}
 .funder-box strong{color:var(--gold);font-weight:500;}
 
 /* ── GOLD STRIP ── */
@@ -627,7 +628,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 .cred-inner{max-width:1100px;margin:0 auto;text-align:center;}
 .cred-lead{font-size:.93rem;color:var(--muted);font-weight:300;margin-bottom:2rem;line-height:1.7;max-width:560px;margin-left:auto;margin-right:auto;}
 .cred-logos{display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:center;align-items:center;}
-.cred-item{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:.04em;}
+.cred-item{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:rgba(255,255,255,.62);letter-spacing:.04em;}
 .cred-sep{color:rgba(201,168,76,.3);font-size:.6rem;}
 @media(max-width:960px){.cred-logos{gap:.5rem .8rem;}}
 
@@ -694,7 +695,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 }
 .community-card p{
   font-size:.83rem;line-height:1.75;
-  color:rgba(255,255,255,.5);font-weight:300;
+  color:rgba(255,255,255,.65);font-weight:300;
   font-family:'DM Sans',sans-serif;
 }
 @media(max-width:960px){
@@ -790,7 +791,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 }
 .p-body p{
   font-size:.83rem;line-height:1.75;
-  color:rgba(255,255,255,.5);font-weight:300;
+  color:rgba(255,255,255,.65);font-weight:300;
 }
 @media(max-width:960px){
   .tda-section{grid-template-columns:1fr;}
@@ -1143,7 +1144,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   background:linear-gradient(to top,rgba(8,8,8,.85) 0%,transparent);
   padding:.5rem .9rem .7rem;
   font-size:.58rem;font-weight:600;letter-spacing:.2em;
-  text-transform:uppercase;color:rgba(255,255,255,.5);
+  text-transform:uppercase;color:rgba(255,255,255,.65);
   font-family:'DM Sans',sans-serif;
 }
 @media(max-width:700px){.bts-grid{grid-template-columns:1fr 1fr;}}
@@ -1338,7 +1339,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 }
 .serve-intro-p{
   font-size:.9rem;line-height:1.8;
-  color:rgba(255,255,255,.45);
+  color:rgba(255,255,255,.62);
   font-weight:300;max-width:380px;
   font-family:'DM Sans',sans-serif;
   flex-shrink:0;
@@ -1355,6 +1356,209 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   background:rgba(201,168,76,.12);
 }
 
+
+/* =========================
+   PRODUCTION POLISH — Launch ready
+   Typography, spacing, mobile, accessibility
+   ========================= */
+
+/* Improve label readability */
+.lbl{
+  font-size:.6rem;font-weight:600;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:1rem;display:block;
+  font-family:'DM Sans',sans-serif;
+  opacity:.85;
+}
+
+/* Consistent section padding */
+.sec-pad{padding:6rem 5vw;}
+.sec-pad-sm{padding:4rem 5vw;}
+
+/* Better paragraph spacing */
+p+p{margin-top:.9rem;}
+
+/* Page hero — always enough room for content */
+.page-hero{
+  position:relative;
+  min-height:clamp(380px,50vh,560px);
+  overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.page-hero .bg{position:absolute;inset:0;background:#0f0f0f;}
+.page-hero .over{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,.65) 50%,rgba(8,8,8,.12) 100%);
+}
+.page-hero .txt{
+  position:relative;z-index:2;
+  padding:3rem 5vw 4rem;
+  max-width:1000px;text-align:center;width:100%;
+}
+
+/* Flagship band — never clips */
+.flagship-band{
+  position:relative;min-height:580px;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.flagship-band img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transform:scale(1.03);transition:transform 8s ease;
+}
+.flagship-band:hover img{transform:scale(1.0);}
+.flagship-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,rgba(8,8,8,.97) 0%,rgba(8,8,8,.6) 50%,rgba(8,8,8,.08) 100%);
+}
+.flagship-content{position:relative;z-index:2;padding:0 5vw 5rem;width:100%;}
+.flagship-text{max-width:580px;text-align:left;}
+.flagship-title{
+  font-size:clamp(2.6rem,4.8vw,4.2rem)!important;
+  font-weight:900;line-height:1.0;margin:.8rem 0 .6rem;
+}
+.flagship-tagline{
+  font-size:1.05rem;font-style:italic;
+  color:var(--gold);font-family:'Playfair Display',serif;
+  margin-bottom:1.4rem;display:block;
+}
+
+/* Mobile nav */
+@media(max-width:860px){
+  .nav-links{gap:1.2rem;}
+  .nav-links a{font-size:.65rem;}
+}
+@media(max-width:740px){
+  .hamburger{display:flex;}
+  .nav-links{display:none;}
+}
+
+/* Better mobile section padding */
+@media(max-width:600px){
+  section{padding:3.5rem 5vw;}
+  .flagship-band{min-height:460px;}
+  .flagship-content{padding:0 5vw 3.5rem;}
+  .flagship-text{max-width:100%;}
+  .flagship-overlay{background:linear-gradient(to top,rgba(8,8,8,.97) 0%,rgba(8,8,8,.6) 55%,rgba(8,8,8,.15) 100%);}
+  .tda-section{grid-template-columns:1fr;}
+  .tda-left{border-right:none;border-bottom:1px solid var(--gold-dim);}
+  .founder-grid{grid-template-columns:1fr;gap:3rem;}
+}
+
+/* Prevent heading overflow */
+h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
+
+/* Button consistency */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  font-family:'DM Sans',sans-serif;font-weight:600;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  transition:all .22s;cursor:pointer;border:none;
+  white-space:nowrap;
+}
+
+/* Gold accents — tightened usage */
+.gold-rule{
+  display:block;width:36px;height:1.5px;
+  background:var(--gold);opacity:.6;
+  margin:1.4rem 0;
+}
+
+/* Funder box */
+.funder-box{
+  background:rgba(201,168,76,.04);
+  border-left:2px solid rgba(201,168,76,.3);
+  padding:1.6rem 2rem;margin-top:0;margin-bottom:2rem;
+  text-align:left;
+}
+.funder-box p{font-size:.87rem;line-height:1.85;color:rgba(255,255,255,.65);font-weight:300;}
+.funder-box strong{color:var(--gold);font-weight:500;}
+
+/* Community Goods product card */
+.goods-card{
+  background:var(--dark);overflow:hidden;
+  transition:background .3s;
+  border-bottom:2px solid transparent;
+}
+.goods-card:hover{background:var(--panel);border-bottom-color:var(--gold);}
+.goods-card-img{aspect-ratio:4/5;overflow:hidden;position:relative;}
+.goods-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.goods-card:hover .goods-card-img img{transform:scale(1.04);}
+.goods-card-body{padding:1.6rem 1.8rem 2rem;}
+.goods-card-name{font-size:1rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.35rem;}
+.goods-card-desc{font-size:.82rem;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;line-height:1.6;margin-bottom:.8rem;}
+.goods-coming{font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.45);font-family:'DM Sans',sans-serif;}
+
+/* Support goes grid — 4-col on desktop */
+.support-goes-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--gold-dim);border:1px solid var(--gold-dim);
+}
+@media(max-width:860px){.support-goes-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.support-goes-grid{grid-template-columns:1fr;}}
+.support-goes-card{
+  background:var(--dark);padding:2.4rem 2rem;
+  transition:background .25s;
+}
+.support-goes-card:hover{background:var(--panel);}
+.support-goes-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;font-weight:900;
+  color:rgba(201,168,76,.08);
+  line-height:1;display:block;margin-bottom:.9rem;
+}
+.support-goes-title{font-size:.88rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;}
+.support-goes-desc{font-size:.8rem;color:rgba(255,255,255,.62);line-height:1.7;font-family:'DM Sans',sans-serif;font-weight:300;}
+
+
+/* =========================
+   MICRO INTERACTIONS
+   Hover glows, card lifts, cursor feedback
+   ========================= */
+
+/* Button hover glow */
+.btn-gold:hover{
+  box-shadow:0 4px 24px rgba(201,168,76,.35);
+  transform:translateY(-1px);
+}
+.btn-wire-gold:hover{
+  box-shadow:0 4px 20px rgba(201,168,76,.15);
+}
+.btn-wire:hover{
+  box-shadow:0 4px 20px rgba(255,255,255,.08);
+}
+
+/* Clickable cards */
+.prog-card,.blog-card,.screen-card,.goods-card,.support-goes-card,
+.testimonial-card,.community-card,.gi-card,.bts-img{
+  cursor:pointer;
+}
+
+/* Card lift on hover */
+.prog-card:hover,.blog-card:hover,.screen-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(0,0,0,.5);
+}
+.goods-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 32px rgba(0,0,0,.4);
+}
+
+/* Smooth transitions on all interactive elements */
+.prog-card,.blog-card,.screen-card,.goods-card,.testimonial-card,.gi-card{
+  transition:transform .3s cubic-bezier(.16,1,.3,1),
+             box-shadow .3s cubic-bezier(.16,1,.3,1),
+             background .25s,border-color .25s;
+}
+
+/* Fade-in improvement */
+.fade-in{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1),
+             transform .7s cubic-bezier(.16,1,.3,1);
+}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+
 </style>
 </head>
 <body>
@@ -1364,7 +1568,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 <!-- ═══ NAV ═══ -->
 <nav>
   <a href="#" class="nav-logo" onclick="go('home')" style="text-decoration:none;display:block;">
-    <img src="mib-logo-transparent.png" alt="Made In Black Studios" style="height:48px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);">
+    <img src="mib-logo-transparent.png" alt="Made In Black Studios" style="height:48px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);background:transparent;">
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#" onclick="go('home')">Home</a></li>
@@ -1372,8 +1576,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     <li><a href="#" onclick="go('getinvolved')">Community</a></li>
     <li><a href="#" onclick="go('about')">Our Story</a></li>
     <li><a href="#" onclick="go('blog')">Blog</a></li>
-    <li><a href="#" onclick="go('donate')">Community Goods</a></li>
-    <li><a href="#" class="nav-cta nav-cta-prog" onclick="go('apply')">Apply Now</a></li>
+    <li><a href="#" onclick="go('donate')">Donate</a></li>
+    <li><a href="#" class="nav-cta nav-cta-prog" onclick="go('apply')">Apply for the Programme</a></li>
     <li><a href="#" class="nav-cta" onclick="go('contact')">Contact</a></li>
   </ul>
   <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
@@ -1387,6 +1591,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 <!-- ═══════════════════ HOME ═══════════════════ -->
 <div id="page-home" class="page active">
 
+<!-- HERO SECTION -->
   <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
   <div class="hero">
     <div class="hero-video">
@@ -1405,13 +1610,15 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         <a href="#" class="btn btn-gold" onclick="go('programmes')">Explore Programmes</a>
         <a href="#" class="btn btn-wire" onclick="go('about')">Our Story</a>
       </div>
-      <p class="hero-proof">Award-winning training, community and opportunities for underrepresented creatives.</p>
+      <p class="hero-proof">Trusted by filmmakers, collaborators and communities across the UK and beyond.</p>
     </div>
     <div class="hero-scroll-cue" aria-hidden="true">
       <span></span><span></span><span></span>
     </div>
   </div>
 
+
+<!-- TICKER -->
   <!-- ── TICKER ────────────────────────────────────────────────────────────── -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-inner">
@@ -1427,6 +1634,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   </div>
 
 
+
+<!-- COMMUNITY GALLERY -->
   <!-- ── COMMUNITY GALLERY STRIP ──────────────────────────────────────────── -->
   <div class="gallery-strip" aria-label="Community gallery">
     <div class="gallery-track" id="galleryTrack">
@@ -1450,6 +1659,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
   </div>
 
+
+<!-- WHO WE EXIST FOR -->
   <!-- ── WHO WE ARE + WHO WE EXIST FOR — COMBINED ──────────────────────────── -->
   <div style="background:var(--dark);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);">
     <div style="max-width:1200px;margin:0 auto;padding:5rem 4vw;">
@@ -1459,7 +1670,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         <div>
           <span class="lbl">Who We Are</span>
           <h2 class="sh" style="font-size:clamp(2rem,3.2vw,3.2rem);margin-bottom:1.2rem;">Creating space<br>for Black voices<br><em>in film &amp; television.</em></h2>
-          <p style="font-size:.88rem;color:rgba(255,255,255,.45);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:1.6rem;">Made In Black Studios CIC — registered in England and Wales (No. 17185100) — removes barriers and builds sustained pathways for Black and underrepresented creatives to train, create and build careers in the UK screen industries.</p>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:1.6rem;">Made In Black Studios CIC — registered in England and Wales (No. 17185100) — removes barriers and builds sustained pathways for Black and underrepresented creatives to train, create and build careers in the UK screen industries.</p>
           <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem;">
             <span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .8rem;border:1px solid rgba(201,168,76,.22);color:rgba(201,168,76,.7);font-family:'DM Sans',sans-serif;">Access</span>
             <span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .8rem;border:1px solid rgba(201,168,76,.22);color:rgba(201,168,76,.7);font-family:'DM Sans',sans-serif;">Training</span>
@@ -1504,22 +1715,22 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <div style="background:var(--black);padding:1.8rem 1.6rem;transition:background .25s;" onmouseover="this.style.background='var(--panel)'" onmouseout="this.style.background='var(--black)'">
             <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:rgba(201,168,76,.15);display:block;margin-bottom:.8rem;">◎</span>
             <h3 style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.5rem;">Young Creatives</h3>
-            <p style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;font-weight:300;">Young Black people ready for professional training and a clear path into the screen industries.</p>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300;">Young Black people ready for professional training and a clear path into the screen industries.</p>
           </div>
           <div style="background:var(--black);padding:1.8rem 1.6rem;transition:background .25s;" onmouseover="this.style.background='var(--panel)'" onmouseout="this.style.background='var(--black)'">
             <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:rgba(201,168,76,.15);display:block;margin-bottom:.8rem;">⊕</span>
             <h3 style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.5rem;">Migrant Filmmakers</h3>
-            <p style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;font-weight:300;">Internationally trained creatives rebuilding careers and networks in the UK.</p>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300;">Internationally trained creatives rebuilding careers and networks in the UK.</p>
           </div>
           <div style="background:var(--black);padding:1.8rem 1.6rem;transition:background .25s;" onmouseover="this.style.background='var(--panel)'" onmouseout="this.style.background='var(--black)'">
             <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:rgba(201,168,76,.15);display:block;margin-bottom:.8rem;">◈</span>
             <h3 style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.5rem;">Emerging Storytellers</h3>
-            <p style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;font-weight:300;">Underrepresented voices with stories to tell who need the tools and platforms to tell them.</p>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300;">Underrepresented voices with stories to tell who need the tools and platforms to tell them.</p>
           </div>
           <div style="background:var(--black);padding:1.8rem 1.6rem;transition:background .25s;" onmouseover="this.style.background='var(--panel)'" onmouseout="this.style.background='var(--black)'">
             <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:rgba(201,168,76,.15);display:block;margin-bottom:.8rem;">◆</span>
             <h3 style="font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.5rem;">Black Communities</h3>
-            <p style="font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.65;font-weight:300;">Communities whose cultural output deserves platforms, investment and audiences.</p>
+            <p style="font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300;">Communities whose cultural output deserves platforms, investment and audiences.</p>
           </div>
         </div>
       </div>
@@ -1527,6 +1738,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
   </div>
 
+
+<!-- TRAIN DEVELOP AMPLIFY -->
   <!-- ── TRAIN · DEVELOP · AMPLIFY ─────────────────────────────────────────── -->
   <div class="tda-section fade-in">
     <div class="tda-left">
@@ -1564,6 +1777,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
   </div>
 
+
+<!-- FLAGSHIP PROGRAMME -->
   <!-- ── FLAGSHIP PROGRAMME: SHOOT YOUR SHORT ──────────────────────────────── -->
   <div class="flagship-band fade-in">
     <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="ShootYourShort — Made In Black Studios on set">
@@ -1578,31 +1793,13 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <p style="font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.06em;font-family:'DM Sans',sans-serif;margin-bottom:.2rem;">Next intake — ShootYourShort Intensive</p>
           <p style="font-size:.82rem;color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;">Saturday 8 &amp; Sunday 9 May</p>
         </div>
-        <a href="#" class="btn btn-gold" onclick="go('apply')">Apply &amp; Join the Waitlist</a>
+        <a href="#" class="btn btn-gold" onclick="go('apply')">Join the Next Cohort</a>
       </div>
     </div>
   </div>
 
-  <!-- ── MIB SCREENINGS ────────────────────────────────────────────────────── -->
-  <!-- =========================
-       HOME PAGE — MIB SCREENINGS BAND
-       Background image: cinema/audience photo
-       Text always fully visible — no clipping
-       ========================= -->
-  <div class="mib-screen-band">
-    <div class="mib-screen-band__bg" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop');"></div>
-    <div class="mib-screen-band__overlay" style="background:linear-gradient(to left,rgba(8,8,8,.96) 35%,rgba(8,8,8,.55) 65%,rgba(8,8,8,.15) 100%);"></div>
-    <div class="mib-screen-band__content">
-      <div class="mib-screen-band__text">
-        <span class="lbl">Made In Black Screenings</span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:.5rem;">Where work gets seen.<br><em style="color:var(--gold);">And filmmakers get better.</em></h2>
-        <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75;font-family:'DM Sans',sans-serif;font-weight:300;max-width:420px;margin-top:1rem;">A regular community space — not a festival, not a competition. Quarterly screenings, script workshops and group feedback for Black and underrepresented filmmakers at every stage.</p>
-        <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7;font-family:'DM Sans',sans-serif;max-width:420px;margin-top:.7rem;">Join our ever-growing community of filmmakers making real, meaningful work — and making their mark on the UK screen industry.</p>
-        <a href="#" class="btn btn-gold" onclick="go('contact')" style="display:inline-block;margin-top:2rem;">Join the Community</a>
-      </div>
-    </div>
-  </div>
 
+<!-- IMPACT -->
   <!-- ── IMPACT + CREDIBILITY ───────────────────────────────────────────────── -->
   <div class="impact-section fade-in">
     <div class="impact-inner">
@@ -1641,6 +1838,89 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   </div>
 
 
+
+<!-- SCREENINGS -->
+  <!-- ── MIB SCREENINGS ────────────────────────────────────────────────────── -->
+  <!-- =========================
+       HOME PAGE — MIB SCREENINGS BAND
+       Background image: cinema/audience photo
+       Text always fully visible — no clipping
+       ========================= -->
+  <div class="mib-screen-band">
+    <div class="mib-screen-band__bg" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop');"></div>
+    <div class="mib-screen-band__overlay" style="background:linear-gradient(to left,rgba(8,8,8,.96) 35%,rgba(8,8,8,.55) 65%,rgba(8,8,8,.15) 100%);"></div>
+    <div class="mib-screen-band__content">
+      <div class="mib-screen-band__text">
+        <span class="lbl">Made In Black Screenings</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:.5rem;">Where work gets seen.<br><em style="color:var(--gold);">And filmmakers get better.</em></h2>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75;font-family:'DM Sans',sans-serif;font-weight:300;max-width:420px;margin-top:1rem;">A regular community space — not a festival, not a competition. Quarterly screenings, script workshops and group feedback for Black and underrepresented filmmakers at every stage.</p>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7;font-family:'DM Sans',sans-serif;max-width:420px;margin-top:.7rem;">Join our ever-growing community of filmmakers making real, meaningful work — and making their mark on the UK screen industry.</p>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem;justify-content:flex-end;">
+          <a href="#" class="btn btn-gold" onclick="go('contact')">Submit a Film or Script</a>
+          <a href="#" class="btn btn-wire" onclick="go('screenings')">Explore Screenings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- FROM THE COMMUNITY -->
+  <!-- ── FROM THE COMMUNITY / SOCIAL ───────────────────────────────────────── -->
+  <div class="social-section">
+    <!-- =========================
+         FROM THE COMMUNITY / RSS FEED SECTION
+         RSS Feed URL: https://rss.app/feeds/Z9hIqCAeRXuQ46yv.xml
+         
+         TO ADD LIVE RSS: 
+         Replace the bts-grid below with a JavaScript fetch of the RSS URL.
+         Use a serverless function or Netlify Function to proxy the RSS feed
+         (avoids CORS issues on static sites).
+         
+         TO UPDATE MANUALLY:
+         Edit the 6 .bts-img items in the grid below.
+         Change img src, bts-cap text to reflect latest posts.
+         ========================= -->
+    <div class="social-header">
+      <span class="lbl" style="display:block;">FROM THE COMMUNITY</span>
+      <h2 class="sh">What's happening now<br>across <em>Made In Black.</em></h2>
+      <p class="body-copy mt2" style="max-width:520px;">Training. Screenings. Community moments. A living record of the work.</p>
+    </div>
+    <div class="social-platforms">
+      <a href="https://www.instagram.com/madeinblackstudios" target="_blank" class="soc-btn ig">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+      <a href="#" target="_blank" class="soc-btn tt">
+        <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        TikTok
+      </a>
+      <a href="#" target="_blank" class="soc-btn fb">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+      <a href="#" target="_blank" class="soc-btn yt">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        YouTube
+      </a>
+    </div>
+    <div class="posts-wrap" style="max-width:1100px;margin:0 auto;">
+      <div class="bts-grid" style="margin-top:2.5rem;">
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533100/DSC_0363_o7bllk.jpg" alt="On set — ShootYourShort"><div class="bts-cap">On Set · ShootYourShort</div></div>
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530602/LAT00121_yqumz4.jpg" alt="Production Training"><div class="bts-cap">Production Training</div></div>
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777802801/Screenshot_2026-05-03_110607_dyoukg.png" alt="Home Away · Documentary"><div class="bts-cap">Home Away · Documentary</div></div>
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" alt="Behind the Camera"><div class="bts-cap">Behind the Camera</div></div>
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801457/46b489e0-1135-4981-9776-58c6da3c6ee3_fsoi7e.jpg" alt="Community Workshop"><div class="bts-cap">Community Workshop</div></div>
+        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Community &amp; Craft"><div class="bts-cap">Community &amp; Craft</div></div>
+      </div>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+        <a href="https://www.instagram.com/madeinblackstudios" target="_blank" class="btn btn-wire-gold">Follow @madeinblackstudios</a>
+        <a href="#" class="btn btn-wire" onclick="go('about')">Our Full Story &amp; Work →</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- TESTIMONIALS -->
   <!-- ── TESTIMONIALS ─────────────────────────────────────────────────────── -->
   <div class="testimonial-strip fade-in">
     <div class="testimonial-inner">
@@ -1692,97 +1972,33 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       </div>
     </div>
   </div>
-  <!-- ── BLOG ──────────────────────────────────────────────────────────────── -->
-  <section class="blog-section fade-in">
-    <div class="blog-header">
-      <div>
-        <span class="lbl">From the Blog</span>
-        <h2 class="sh">Resources, Insights<br>&amp; <em>Spotlights.</em></h2>
-        <p class="body-copy mt1" style="max-width:480px;">Weekly grants and opportunities, monthly Talent Spotlights, tutorials and industry guides — for Black and underrepresented creatives.</p>
-      </div>
-      <a href="#" class="btn btn-wire-gold blog-all-link" onclick="go('blog')">Visit the Blog</a>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=600&q=80&fit=crop" alt="Opportunities"></div>
-        <div class="blog-body">
-          <span class="blog-tag">Opportunities</span>
-          <h3>Grants &amp; Funding Open Now — Week of 28 April 2026</h3>
-          <p>Open calls, residencies and commissions for Black and underrepresented filmmakers in the UK. Updated weekly.</p>
-          <div class="blog-meta"><span>28 April 2026</span><span style="color:var(--gold);">Coming soon →</span></div>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?w=1200&q=80&fit=crop" alt="Cinematography tutorial"></div>
-        <div class="blog-body">
-          <span class="blog-tag">Tutorial</span>
-          <h3>Cinematography Fundamentals for Emerging Filmmakers</h3>
-          <p>Exposure, composition and movement — the visual storytelling foundations, written for people just getting started.</p>
-          <div class="blog-meta"><span>Coming soon</span><span style="color:var(--gold);">Coming soon →</span></div>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop" alt="Industry notes"></div>
-        <div class="blog-body">
-          <span class="blog-tag">Insight</span>
-          <h3>Navigating the UK Film Industry as a Migrant Creative</h3>
-          <p>The networks are informal, the funding is opaque. Here's what we wish we'd known from day one.</p>
-          <div class="blog-meta"><span>Coming soon</span><span style="color:var(--gold);">Coming soon →</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── FROM THE COMMUNITY / SOCIAL ───────────────────────────────────────── -->
-  <div class="social-section">
-    <!-- =========================
-         FROM THE COMMUNITY / RSS FEED SECTION
-         RSS Feed URL: https://rss.app/feeds/Z9hIqCAeRXuQ46yv.xml
-         
-         TO ADD LIVE RSS: 
-         Replace the bts-grid below with a JavaScript fetch of the RSS URL.
-         Use a serverless function or Netlify Function to proxy the RSS feed
-         (avoids CORS issues on static sites).
-         
-         TO UPDATE MANUALLY:
-         Edit the 6 .bts-img items in the grid below.
-         Change img src, bts-cap text to reflect latest posts.
-         ========================= -->
-    <div class="social-header">
-      <span class="lbl" style="display:block;">From the Community</span>
-      <h2 class="sh">Range. Craft. <em>Experience.</em></h2>
-      <p class="body-copy mt2" style="max-width:520px;">Training. Screenings. Community moments. A living record of the work.</p>
-    </div>
-    <div class="social-platforms">
-      <a href="https://www.instagram.com/madeinblackstudios" target="_blank" class="soc-btn ig">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        Instagram
-      </a>
-      <a href="#" target="_blank" class="soc-btn tt">
-        <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-        TikTok
-      </a>
-      <a href="#" target="_blank" class="soc-btn fb">
-        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Facebook
-      </a>
-      <a href="#" target="_blank" class="soc-btn yt">
-        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-        YouTube
-      </a>
-    </div>
-    <div class="posts-wrap" style="max-width:1100px;margin:0 auto;">
-      <div class="bts-grid" style="margin-top:2.5rem;">
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533100/DSC_0363_o7bllk.jpg" alt="On set — ShootYourShort"><div class="bts-cap">On Set · ShootYourShort</div></div>
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777530602/LAT00121_yqumz4.jpg" alt="Production Training"><div class="bts-cap">Production Training</div></div>
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777802801/Screenshot_2026-05-03_110607_dyoukg.png" alt="Home Away · Documentary"><div class="bts-cap">Home Away · Documentary</div></div>
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" alt="Behind the Camera"><div class="bts-cap">Behind the Camera</div></div>
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801457/46b489e0-1135-4981-9776-58c6da3c6ee3_fsoi7e.jpg" alt="Community Workshop"><div class="bts-cap">Community Workshop</div></div>
-        <div class="bts-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg" alt="Community &amp; Craft"><div class="bts-cap">Community &amp; Craft</div></div>
+<!-- FINAL CTA -->
+
+  <!-- COMMUNITY GOODS PREVIEW — links to Donate page -->
+  <!-- To update: change the 3 img src attributes below -->
+  <div style="background:var(--dark);border-top:1px solid var(--gold-dim);padding:5rem 5vw;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.5rem;">
+        <div>
+          <span class="lbl">Community Goods</span>
+          <h2 class="sh" style="margin-bottom:.5rem;">Wear the mission.<br><em>Help someone find their way in.</em></h2>
+        </div>
+        <a href="#" class="btn btn-wire-gold" onclick="go('donate')">Explore Community Goods</a>
       </div>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
-        <a href="https://www.instagram.com/madeinblackstudios" target="_blank" class="btn btn-wire-gold">Follow @madeinblackstudios</a>
-        <a href="#" class="btn btn-wire" onclick="go('about')">Our Full Story &amp; Work →</a>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--gold-dim);border:1px solid var(--gold-dim);">
+        <div class="goods-card">
+          <div class="goods-card-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808134/ChatGPT_Image_May_3_2026_12_34_47_PM_jwt0bu.png" alt="MIB Cap"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.75) 0%,transparent 55%);"></div></div>
+          <div class="goods-card-body"><p class="goods-card-name">MIB Cap</p><span class="goods-coming">Coming Soon</span></div>
+        </div>
+        <div class="goods-card">
+          <div class="goods-card-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808400/ChatGPT_Image_May_3_2026_12_37_46_PM_xhcdlt.png" alt="MIB T-Shirt"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.75) 0%,transparent 55%);"></div></div>
+          <div class="goods-card-body"><p class="goods-card-name">MIB T-Shirt</p><span class="goods-coming">Coming Soon</span></div>
+        </div>
+        <div class="goods-card">
+          <div class="goods-card-img"><img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777808743/ChatGPT_Image_May_3_2026_12_44_45_PM_cpecme.png" alt="MIB Hoodie"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.75) 0%,transparent 55%);"></div></div>
+          <div class="goods-card-body"><p class="goods-card-name">MIB Hoodie</p><span class="goods-coming">Coming Soon</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1797,8 +2013,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       <div style="width:40px;height:2px;background:rgba(8,8,8,.3);margin:1.6rem auto;"></div>
       <p style="font-size:.92rem;color:rgba(0,0,0,.55);max-width:440px;margin:0 auto 2.8rem;line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;">Training, mentorship and community for Black and underrepresented creatives ready to build careers in the UK screen industries.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="#" class="btn" onclick="go('programmes')" style="background:var(--black);color:var(--gold);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Explore Programmes</a>
-        <a href="#" class="btn" onclick="go('getinvolved')" style="background:transparent;color:var(--black);border:1.5px solid rgba(0,0,0,.3);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Join Community</a>
+        <a href="#" class="btn" onclick="go('programmes')" style="background:var(--black);color:var(--gold);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Apply for the Programme</a>
+        <a href="#" class="btn" onclick="go('getinvolved')" style="background:transparent;color:var(--black);border:1.5px solid rgba(0,0,0,.3);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Join the Community</a>
       </div>
     </div>
   </div>
@@ -1978,6 +2194,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
   </div>
 
+
+  <!-- SHOOTYOURSHORT FLAGSHIP BAND -->
   <!-- FLAGSHIP: SHOOT YOUR SHORT -->
   <div class="flagship-band" style="min-height:600px;">
     <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" alt="ShootYourShort — Made In Black Studios on set, Manchester">
@@ -2008,7 +2226,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 
         <p style="font-size:.75rem;color:rgba(255,255,255,0.3);margin-bottom:1.4rem;font-family:'DM Sans',sans-serif;line-height:1.6;">Open to beginners, career changers, and migrants rebuilding UK credits. Delivered on Saturdays.</p>
         <p style="font-size:.85rem;color:rgba(255,255,255,0.55);margin-bottom:1.8rem;line-height:1.65;font-family:'DM Sans',sans-serif;max-width:420px;">If this sounds like the opportunity you've been waiting for — apply now and join the waitlist for our next cohort.</p>
-        <a href="#" class="btn btn-gold" onclick="go('apply')">Apply &amp; Join the Waitlist</a>
+        <a href="#" class="btn btn-gold" onclick="go('apply')">Join the Next Cohort</a>
       </div>
     </div>
   </div>
@@ -2032,11 +2250,16 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Group feedback that builds confidence, not doubt ◆</li>
           <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;font-family:'DM Sans',sans-serif;line-height:1.5;">Free to attend. Open to all. Community-led. ◆</li>
         </ul>
-        <a href="#" class="btn btn-gold" onclick="go('contact')" style="display:inline-block;margin-top:1rem;">Join the Community</a>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;justify-content:flex-end;">
+          <a href="#" class="btn btn-gold" onclick="go('contact')">Talk to Us About Your Film</a>
+          <a href="#" class="btn btn-wire" onclick="go('screenings')">Upcoming Screenings</a>
+        </div>
       </div>
     </div>
   </div>
 
+
+  <!-- FURTHER PROGRAMMES GRID -->
   <!-- PROGRAMME GRID -->
   <section style="padding:5.5rem 4vw;">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem;">
@@ -2056,9 +2279,9 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <h3>MIB Mentorship</h3>
           <p>Breaking into the UK screen industries is easier when you're not doing it alone. MIB Mentorship connects Black and underrepresented creatives with working industry professionals — matched to your specific goals, not a generic programme.</p>
           <ul style="list-style:none;padding:0;margin:.9rem 0 1rem;">
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Matched with a mentor who understands your goals</li>
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Regular one-to-one sessions focused on your path</li>
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Industry insight, introductions and honest career guidance</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Matched with a mentor who understands your goals</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Regular one-to-one sessions focused on your path</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Industry insight, introductions and honest career guidance</li>
           </ul>
           <a href="#" class="btn btn-wire-gold" style="font-size:.65rem;padding:.7rem 1.4rem;" onclick="go('mentorship')">Register Your Interest</a>
         </div>
@@ -2072,9 +2295,9 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <h3>Made In Black Crew</h3>
           <p>The Made In Black Crew is where programme alumni come back to the work — this time as crew. A growing pool of trained, credit-ready filmmakers available to support productions and build real UK careers.</p>
           <ul style="list-style:none;padding:0;margin:.9rem 0 1rem;">
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Crew opportunities on MIB and community productions</li>
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>A growing portfolio of real UK industry credits</li>
-            <li style="font-size:.77rem;color:rgba(255,255,255,0.5);padding:.4rem 0;padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Access to the MIB network of filmmakers and contacts</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Crew opportunities on MIB and community productions</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.06);padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>A growing portfolio of real UK industry credits</li>
+            <li style="font-size:.77rem;color:rgba(255,255,255,0.65);padding:.4rem 0;padding-left:1rem;position:relative;font-family:'DM Sans',sans-serif;line-height:1.5;"><span style="position:absolute;left:0;color:var(--gold);font-size:.7rem;">→</span>Access to the MIB network of filmmakers and contacts</li>
           </ul>
           <a href="#" class="btn btn-wire-gold" style="font-size:.65rem;padding:.7rem 1.4rem;" onclick="go('contact')">Join the Crew</a>
         </div>
@@ -2108,7 +2331,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       <span class="lbl" style="display:block;text-align:center;">Ready?</span>
       <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:.8rem;font-family:'Playfair Display',serif;color:var(--white);">Filmmaker, mentor or partner — there's a way in.</h3>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="#" class="btn btn-gold" onclick="go('contact')">Apply Now</a>
+        <a href="#" class="btn btn-gold" onclick="go('contact')">Apply for the Programme</a>
         <a href="#" class="btn btn-wire" onclick="go('contact')">Contact Us</a>
       </div>
     </div>
@@ -2160,20 +2383,69 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;text-align:center;">
+    <!-- =========================
+         SCREENINGS CONTACT FORM
+         Netlify form — submissions go to hello@madeinblackstudios.com
+         Update form field options as needed
+         ========================= -->
+    <div style="margin-top:4rem;display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;">
       <div>
-        <span class="lbl">Submit Your Film</span>
-        <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:.9rem;color:var(--white);">Your Work Deserves to Be Seen</h3>
-        <p class="body-copy" style="max-width:420px;">Black filmmaker with a film? We want to hear from you. Made In Black Screenings is built for work that deserves an audience.</p>
-        <a href="#" class="btn btn-gold mt3" onclick="go('contact')" style="display:inline-block;">Submit Your Film</a>
+        <span class="lbl">Get Involved</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:1rem;">Submit a film.<br>Share a script.<br><em style="color:var(--gold);">Join the conversation.</em></h3>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.8;font-family:'DM Sans',sans-serif;font-weight:300;max-width:380px;">MIB Screenings welcomes films, scripts and ideas at every stage. Tell us about your project and what kind of support you're looking for.</p>
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:.8rem;">
+          <span style="font-size:.78rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;padding-left:.8rem;border-left:2px solid rgba(201,168,76,.3);">Screening a finished film or documentary</span>
+          <span style="font-size:.78rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;padding-left:.8rem;border-left:2px solid rgba(201,168,76,.3);">Script feedback from the community</span>
+          <span style="font-size:.78rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;padding-left:.8rem;border-left:2px solid rgba(201,168,76,.3);">Group feedback on a work in progress</span>
+          <span style="font-size:.78rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;padding-left:.8rem;border-left:2px solid rgba(201,168,76,.3);">Developing a project with community input</span>
+        </div>
       </div>
       <div>
-        <span class="lbl">Attend</span>
-        <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:.9rem;color:var(--white);">Join the Audience</h3>
-        <p class="body-copy" style="max-width:420px;">Our screenings are open to everyone. Sign up to the mailing list to be first to know about upcoming events.</p>
-        <a href="#" class="btn btn-wire mt3" onclick="go('contact')" style="display:inline-block;">Get Notified</a>
+        <form name="screenings-submission" method="POST" data-netlify="true" style="display:flex;flex-direction:column;gap:0;">
+          <input type="hidden" name="form-name" value="screenings-submission">
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Your name *</label>
+            <input type="text" name="name" required placeholder="Full name" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);color:#fff;padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderBottomColor='var(--gold)'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Email address *</label>
+            <input type="email" name="email" required placeholder="your@email.com" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);color:#fff;padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderBottomColor='var(--gold)'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Project title *</label>
+            <input type="text" name="project_title" required placeholder="Name of your film, script or project" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);color:#fff;padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderBottomColor='var(--gold)'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">What is this? *</label>
+            <select name="project_type" required style="width:100%;background:var(--panel);border:none;border-bottom:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;cursor:pointer;">
+              <option value="" disabled selected>Select one</option>
+              <option style="background:#141414;">Finished short film</option>
+              <option style="background:#141414;">Finished feature or documentary</option>
+              <option style="background:#141414;">Work in progress — film or rough cut</option>
+              <option style="background:#141414;">Script or screenplay</option>
+              <option style="background:#141414;">Early idea or concept</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">What kind of support are you looking for? *</label>
+            <select name="support_type" required style="width:100%;background:var(--panel);border:none;border-bottom:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;cursor:pointer;">
+              <option value="" disabled selected>Select one</option>
+              <option style="background:#141414;">Screen my film at a MIB Screening</option>
+              <option style="background:#141414;">Script feedback from the community</option>
+              <option style="background:#141414;">Group feedback on a rough cut</option>
+              <option style="background:#141414;">Community input to develop the project</option>
+              <option style="background:#141414;">General enquiry about screenings</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Message or link to your work</label>
+            <textarea name="message" placeholder="Tell us more, or paste a link to your film, script or reel..." style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.15);color:#fff;padding:.8rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:90px;resize:vertical;line-height:1.65;transition:border-color .2s;" onfocus="this.style.borderBottomColor='var(--gold)'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="margin-top:1rem;cursor:pointer;padding:1rem 2rem;">Submit Your Project →</button>
+        </form>
       </div>
     </div>
+
   </section>
 </div><!-- /screenings -->
 
@@ -2212,7 +2484,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&q=80&fit=crop&crop=face" alt="In Focus — filmmaker portrait">
         <div class="infocus-img-overlay">
           <span class="spot-tag">In Focus — May 2026</span>
-          <p style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.4rem;">First profile coming soon</p>
+          <p style="font-size:.78rem;color:rgba(255,255,255,.65);margin-top:.4rem;">First profile coming soon</p>
         </div>
       </div>
     </div>
@@ -2289,41 +2561,125 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 
 <!-- =========================
      DONATE / COMMUNITY GOODS PAGE
+     To update: edit the section copy, product images and CTAs below.
+     Product images are in .goods-card-img > img src attributes.
      ========================= -->
 <!-- ═══════════════════ DONATE ═══════════════════ -->
 <div id="page-donate" class="page">
 
-  <!-- Cinematic hero -->
-  <div style="position:relative;min-height:460px;overflow:hidden;display:flex;align-items:flex-end;">
-    <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" alt="Made In Black Studios" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(.38) grayscale(.5);">
-    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,.98) 0%,rgba(8,8,8,.7) 55%,rgba(8,8,8,.15) 100%);"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,transparent 60%);"></div>
-    <div style="position:relative;z-index:2;padding:0 5vw 4.5rem;max-width:640px;">
-      <span style="font-size:.58rem;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.8rem;">Donate &amp; Support</span>
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;line-height:1.0;color:#fff;margin-bottom:.8rem;">Help us make<br><em style="color:var(--gold);">access possible.</em></h1>
-      <div style="width:32px;height:1.5px;background:var(--gold);opacity:.7;margin:1.2rem 0;"></div>
-      <p style="font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.75;font-family:'DM Sans',sans-serif;font-weight:300;max-width:500px;">Every contribution goes directly into training, screenings and community opportunity. No passive support — your purchase or donation creates real change.</p>
+  <!-- =========================
+       COMMUNITY GOODS HERO
+       Background image: update the img src below
+       ========================= -->
+  <div style="position:relative;overflow:hidden;padding:8rem 5vw 6rem;background:var(--black);">
+    <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(.18) grayscale(.6);">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(201,168,76,.06) 0%,transparent 70%);"></div>
+    <div style="position:relative;z-index:2;max-width:760px;">
+      <span class="lbl">Community Goods</span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.8rem);font-weight:900;line-height:1.02;color:#fff;margin-bottom:1.2rem;letter-spacing:-.02em;">Support the next generation<br><em style="color:var(--gold);">of filmmakers.</em></h1>
+      <div class="gold-rule"></div>
+      <p style="font-size:clamp(.95rem,1.4vw,1.1rem);color:rgba(255,255,255,.65);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;max-width:580px;margin-top:1.5rem;">Made In Black exists to remove barriers, build confidence and create access. Every contribution helps someone take a real step into the industry.</p>
     </div>
   </div>
 
-  <section style="padding:5.5rem 4vw;">
+  <!-- =========================
+       COMMUNITY GOODS PRODUCTS
+       Update product images in .goods-card-img img src below.
+       Cap:    v1777808134/ChatGPT_Image_May_3_2026_12_34_47_PM_jwt0bu.png
+       Tee:    v1777808400/ChatGPT_Image_May_3_2026_12_37_46_PM_xhcdlt.png
+       Hoodie: v1777808743/ChatGPT_Image_May_3_2026_12_44_45_PM_cpecme.png
+       ========================= -->
+  <section style="padding:6rem 5vw;">
+    <div style="max-width:1100px;margin:0 auto;">
 
-    <!-- =========================
-         COMMUNITY GOODS SECTION
-         Update product images: change img src attributes below
-         Cap image:    https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808134/ChatGPT_Image_May_3_2026_12_34_47_PM_jwt0bu.png
-         T-Shirt image: https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808400/ChatGPT_Image_May_3_2026_12_37_46_PM_xhcdlt.png
-         Hoodie image:  https://res.cloudinary.com/dv05nd0ji/image/upload/v1777808743/ChatGPT_Image_May_3_2026_12_44_45_PM_cpecme.png
-         ========================= -->
-    <!-- COMMUNITY GOODS — identity, representation, belonging -->
-    <div style="margin-bottom:5rem;">
-      <span class="lbl" style="display:block;margin-bottom:.6rem;">Community Goods</span>
-      <h2 class="sh" style="margin-bottom:.8rem;">More than fashion.<br><em>Identity. Pride. Belonging.</em></h2>
-      <!-- COMMUNITY GOODS — MISSION STATEMENT
-           Update this copy in the <p> tags below -->
-      <p style="font-size:clamp(1.05rem,2vw,1.3rem);color:rgba(255,255,255,.85);line-height:1.75;font-family:'Playfair Display',serif;font-weight:400;max-width:740px;margin-bottom:1.5rem;font-style:italic;">Community Goods are our way of turning visible support into practical access.</p>
-      <p style="font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;max-width:660px;margin-bottom:1rem;">This is not fashion for profit. It is a way to wear the mission and help someone else find their way in.</p>
-      <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.8;font-family:'DM Sans',sans-serif;font-weight:300;max-width:660px;margin-bottom:3rem;">Every future purchase will help us create workshops, screenings and practical support for emerging Black and underrepresented creatives — giving them the confidence, the tools and the access to build real careers in film and television.</p>
+      <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;margin-bottom:6rem;">
+        <div>
+          <span class="lbl">What These Are</span>
+          <h2 class="sh" style="margin-bottom:1.4rem;">More than fashion.<br><em>Identity. Pride.<br>Belonging.</em></h2>
+          <p style="font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:1rem;">This is not fashion for profit. Every future purchase will be a direct contribution to the work — helping emerging Black and underrepresented creatives access training, equipment, screenings and mentorship.</p>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.8;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:2rem;">Wearing Made In Black on a production set, in a meeting room or at a screening is an act of belonging. It says: I am part of this. I support this. I believe in this community.</p>
+          <a href="#" class="btn btn-gold" onclick="go('contact')" style="display:inline-block;margin-right:1rem;">Register Interest</a>
+          <a href="#donate-support" class="btn btn-wire" style="display:inline-block;" onclick="document.getElementById('donate-support').scrollIntoView({behavior:'smooth'})">Support the Mission</a>
+        </div>
+        <div>
+          <!-- PRODUCT GRID — 3 items -->
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--gold-dim);border:1px solid var(--gold-dim);">
+
+            <!-- CAP — update img src to change product image -->
+            <div class="goods-card">
+              <div class="goods-card-img">
+                <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808134/ChatGPT_Image_May_3_2026_12_34_47_PM_jwt0bu.png" alt="MIB Cap">
+                <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.8) 0%,transparent 50%);"></div>
+              </div>
+              <div class="goods-card-body">
+                <p class="goods-card-name">MIB Cap</p>
+                <p class="goods-card-desc">Embroidered logo. Clean, minimal, iconic. A statement on any set.</p>
+                <span class="goods-coming">Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- T-SHIRT — update img src to change product image -->
+            <div class="goods-card">
+              <div class="goods-card-img">
+                <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/q_auto/f_auto/v1777808400/ChatGPT_Image_May_3_2026_12_37_46_PM_xhcdlt.png" alt="MIB T-Shirt">
+                <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.8) 0%,transparent 50%);"></div>
+              </div>
+              <div class="goods-card-body">
+                <p class="goods-card-name">MIB T-Shirt</p>
+                <p class="goods-card-desc">Premium unisex tee. Chest logo print. Wear the mission wherever your work takes you.</p>
+                <span class="goods-coming">Coming Soon</span>
+              </div>
+            </div>
+
+            <!-- HOODIE — update img src to change product image -->
+            <div class="goods-card">
+              <div class="goods-card-img">
+                <img src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777808743/ChatGPT_Image_May_3_2026_12_44_45_PM_cpecme.png" alt="MIB Hoodie">
+                <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.8) 0%,transparent 50%);"></div>
+              </div>
+              <div class="goods-card-body">
+                <p class="goods-card-name">MIB Hoodie</p>
+                <p class="goods-card-desc">Heavyweight unisex hoodie. Logo embossed. On set or off it — feel the community.</p>
+                <span class="goods-coming">Coming Soon</span>
+              </div>
+            </div>
+
+          </div>
+          <p style="font-size:.7rem;color:rgba(255,255,255,.2);letter-spacing:.12em;text-transform:uppercase;font-family:'DM Sans',sans-serif;margin-top:1rem;text-align:center;">Sustainable · Print on Demand · Coming Soon</p>
+        </div>
+      </div>
+
+      <!-- =========================
+           WHERE YOUR SUPPORT GOES
+           Update the four card titles and descriptions below
+           ========================= -->
+      <div style="margin-bottom:5rem;">
+        <span class="lbl">Where Your Support Goes</span>
+        <h2 class="sh" style="margin-bottom:.8rem;">Every contribution<br><em>creates real change.</em></h2>
+        <p style="font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.8;font-family:'DM Sans',sans-serif;font-weight:300;max-width:600px;margin-bottom:3rem;">Every future purchase will help us create spaces where emerging creatives can learn, build confidence and access the tools often kept out of reach.</p>
+        <div class="support-goes-grid">
+          <div class="support-goes-card">
+            <span class="support-goes-num">01</span>
+            <h4 class="support-goes-title">Workshops</h4>
+            <p class="support-goes-desc">Hands-on production and post-production training for Black and underrepresented creatives — with professional cinema-grade equipment from day one.</p>
+          </div>
+          <div class="support-goes-card">
+            <span class="support-goes-num">02</span>
+            <h4 class="support-goes-title">Screenings</h4>
+            <p class="support-goes-desc">Regular community screenings and film labs giving Black filmmakers the audiences, feedback and visibility their work deserves.</p>
+          </div>
+          <div class="support-goes-card">
+            <span class="support-goes-num">03</span>
+            <h4 class="support-goes-title">Equipment Access</h4>
+            <p class="support-goes-desc">Professional gear in the hands of people who couldn't otherwise access it. ARRI. FX6. Lighting. Sound. The tools of the trade, without the barriers.</p>
+          </div>
+          <div class="support-goes-card">
+            <span class="support-goes-num">04</span>
+            <h4 class="support-goes-title">Mentorship</h4>
+            <p class="support-goes-desc">One-to-one industry guidance from working professionals — matched to where each person is in their journey, not a generic programme.</p>
+          </div>
+        </div>
+      </div>
 
       <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--gold-dim);border:1px solid var(--gold-dim);">
 
@@ -2374,41 +2730,14 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       <a href="#" class="btn btn-wire-gold" onclick="go('contact')" style="display:inline-block;">Register Interest</a>
     </div>
 
-    <!-- =========================
-         WHERE YOUR SUPPORT GOES
-         ========================= -->
-    <div style="margin-bottom:4rem;padding:3rem 0;border-top:1px solid var(--gold-dim);">
-      <span class="lbl" style="display:block;margin-bottom:.8rem;">Where Every Contribution Goes</span>
-      <h2 class="sh" style="margin-bottom:1rem;">Your support funds <em>real change.</em></h2>
-      <p class="body-copy" style="margin-bottom:2.5rem;max-width:600px;">Every purchase of community goods — and every donation — goes directly into one of these five areas:</p>
-      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--gold-dim);border:1px solid var(--gold-dim);">
-        <div style="background:var(--dark);padding:2rem 1.4rem;text-align:center;">
-          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(201,168,76,.1);display:block;margin-bottom:.8rem;">01</span>
-          <h4 style="font-size:.8rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;">Workshops</h4>
-          <p style="font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;">Practical, hands-on filmmaking sessions for Black and underrepresented creatives.</p>
-        </div>
-        <div style="background:var(--dark);padding:2rem 1.4rem;text-align:center;">
-          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(201,168,76,.1);display:block;margin-bottom:.8rem;">02</span>
-          <h4 style="font-size:.8rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;">Screenings</h4>
-          <p style="font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;">Community and public screenings giving Black films the audiences they deserve.</p>
-        </div>
-        <div style="background:var(--dark);padding:2rem 1.4rem;text-align:center;">
-          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(201,168,76,.1);display:block;margin-bottom:.8rem;">03</span>
-          <h4 style="font-size:.8rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;">Equipment Access</h4>
-          <p style="font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;">Professional cinema-grade gear in the hands of people who couldn't otherwise access it.</p>
-        </div>
-        <div style="background:var(--dark);padding:2rem 1.4rem;text-align:center;">
-          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(201,168,76,.1);display:block;margin-bottom:.8rem;">04</span>
-          <h4 style="font-size:.8rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;">Mentorship</h4>
-          <p style="font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;">One-to-one industry guidance matched to where each person is in their creative journey.</p>
-        </div>
-        <div style="background:var(--dark);padding:2rem 1.4rem;text-align:center;">
-          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(201,168,76,.1);display:block;margin-bottom:.8rem;">05</span>
-          <h4 style="font-size:.8rem;font-weight:700;color:#fff;font-family:'DM Sans',sans-serif;margin-bottom:.5rem;">Community Films</h4>
-          <p style="font-size:.75rem;color:rgba(255,255,255,.4);line-height:1.6;">Supporting the production and public screening of films made by our community.</p>
-        </div>
-      </div>
-    </div>
+
+      <!-- =========================
+           FINANCIAL SUPPORT & DONATE
+           Donation tiers and in-kind support
+           ========================= -->
+      <div id="donate-support" style="scroll-margin-top:80px;">
+
+</div>
 
     <!-- FINANCIAL SUPPORT -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gold-dim);border:1px solid var(--gold-dim);margin-bottom:3rem;">
@@ -2416,14 +2745,17 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         <span class="lbl">Financial Support</span>
         <h2 class="sh" style="margin-bottom:1rem;">Every contribution<br><em>reaches people.</em></h2>
         <p class="body-copy" style="margin:0 0 1.5rem;max-width:100%;">Made In Black Studios CIC reinvests every pound into training, screenings and mentorship. There is no passive support here — your contribution changes careers.</p>
+        <!-- DONATION TIERS — update amounts and labels as needed -->
         <div class="tiers">
-          <div class="tier on" onclick="pickTier(this)"><span class="amt">£10</span><span class="imp">Helps fund materials</span></div>
-          <div class="tier" onclick="pickTier(this)"><span class="amt">£25</span><span class="imp">Supports one session</span></div>
-          <div class="tier" onclick="pickTier(this)"><span class="amt">£50</span><span class="imp">Funds a screening</span></div>
-          <div class="tier" onclick="pickTier(this)"><span class="amt">£100</span><span class="imp">Sponsors workshop equipment</span></div>
-          <div class="tier" onclick="pickTier(this)"><span class="amt">Other</span><span class="imp">Every amount matters</span></div>
+          <div class="tier on" onclick="pickTier(this)"><span class="amt">£10</span><span class="imp">Support a session</span></div>
+          <div class="tier" onclick="pickTier(this)"><span class="amt">£25</span><span class="imp">Support a filmmaker</span></div>
+          <div class="tier" onclick="pickTier(this)"><span class="amt">£50</span><span class="imp">Support a workshop</span></div>
+          <div class="tier" onclick="pickTier(this)"><span class="amt">Other</span><span class="imp">Choose your amount</span></div>
         </div>
         <a href="mailto:hello@madeinblackstudios.com?subject=Donation — Made In Black Studios" class="btn btn-gold" style="display:inline-block;margin-top:1.5rem;">Donate via Email</a>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);">
+          <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.8;font-family:'DM Sans',sans-serif;font-style:italic;">"This is not about selling products. It's about building access."</p>
+        </div>
         <p style="font-size:.65rem;color:rgba(255,255,255,.2);margin-top:.9rem;line-height:1.7;font-family:'DM Sans',sans-serif;">We'll send bank details and a receipt. CIC No. 17185100. All surplus reinvested.</p>
       </div>
       <div style="background:var(--panel);padding:3.5rem 2.5rem;">
@@ -2528,7 +2860,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     <div style="margin-top:4rem;padding-top:4rem;border-top:1px solid var(--gold-dim);">
       <span class="lbl" style="display:block;margin-bottom:.6rem;">Community Goods</span>
       <h2 class="sh" style="margin-bottom:.8rem;">Wear the mission.<br><em>Help someone find their way in.</em></h2>
-      <p style="font-size:.92rem;color:rgba(255,255,255,.5);line-height:1.8;font-family:'DM Sans',sans-serif;max-width:600px;margin-bottom:2.5rem;">Community goods help fund access, equipment, training and opportunities. Every future purchase is a contribution — not just merchandise.</p>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.8;font-family:'DM Sans',sans-serif;max-width:600px;margin-bottom:2.5rem;">Community goods help fund access, equipment, training and opportunities. Every future purchase is a contribution — not just merchandise.</p>
       <!-- GOODS PREVIEW GRID — 3 products -->
       <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--gold-dim);border:1px solid var(--gold-dim);max-width:780px;margin-bottom:2rem;">
         <!-- Cap preview -->
@@ -2645,7 +2977,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   <div class="footer-grid">
     <div class="footer-brand">
       <div style="margin-bottom:1.5rem;">
-        <img src="mib-logo-transparent.png" alt="Made In Black Studios" style="height:72px;width:auto;display:block;object-fit:contain;margin-bottom:.8rem;filter:brightness(0) invert(1);">
+        <img src="mib-logo-transparent.png" alt="Made In Black Studios" style="height:72px;width:auto;display:block;object-fit:contain;margin-bottom:.8rem;filter:brightness(0) invert(1);background:transparent;">
         <p style="font-family:'DM Sans',sans-serif;font-size:.52rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0;">Community Interest Company</p>
       </div>
       <p>Creating space for Black voices in film and television. Training, development, mentorship and community built from lived experience, rooted in the UK.</p>
@@ -2656,7 +2988,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       <li><a href="#" onclick="go('home')">Home</a></li>
       <li><a href="#" onclick="go('about')">Our Story</a></li>
       <li><a href="#" onclick="go('programmes')">Programmes</a></li>
-      <li><a href="#" onclick="go('apply')">Apply Now</a></li>
+      <li><a href="#" onclick="go('apply')">Apply for the Programme</a></li>
       <li><a href="#" onclick="go('screenings')">Screenings &amp; Film Labs</a></li>
       <li><a href="#" onclick="go('getinvolved')">Community</a></li>
       <li><a href="#" onclick="go('blog')">Blog</a></li>
@@ -2666,7 +2998,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
       <li><a href="#" onclick="go('getinvolved')">For Mentors</a></li>
       <li><a href="#" onclick="go('getinvolved')">For Schools</a></li>
       <li><a href="#" onclick="go('getinvolved')">For Funders</a></li>
-      <li><a href="#" onclick="go('donate')">Community Goods</a></li>
+      <li><a href="#" onclick="go('donate')">Donate</a></li>
     </ul></div>
     <div class="fc"><h4>Contact</h4><ul>
       <li><a href="#">Manchester M12 6AE</a></li>
@@ -2711,24 +3043,24 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
         <div>
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Full name *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Full name *</label>
           <input type="text" name="name" placeholder="Your full name" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
         </div>
         <div>
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Email address *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Email address *</label>
           <input type="email" name="email" placeholder="your@email.com" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
         </div>
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Phone number <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Phone number <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
         <input type="tel" name="phone" placeholder="+44" style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Where are you in your creative journey? *</label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Where are you in your creative journey? *</label>
         <textarea name="creative_journey" placeholder="Tell us where you are right now — what you're working on, what stage you're at, and what you're trying to move towards." required style="width:100%;background:rgba(255,255,255,.03);border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:110px;resize:vertical;line-height:1.65;"></textarea>
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What area do you want mentorship in? *</label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What area do you want mentorship in? *</label>
         <select name="mentorship_area" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;cursor:pointer;">
           <option value="" disabled selected style="background:#141414;">Select one</option>
           <option style="background:#141414;">Directing</option>
@@ -2743,19 +3075,19 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </select>
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What would your ideal mentor's skillset be? *</label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What would your ideal mentor's skillset be? *</label>
         <textarea name="ideal_mentor" placeholder="Describe the kind of experience, background or knowledge you'd want your mentor to have." required style="width:100%;background:rgba(255,255,255,.03);border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:100px;resize:vertical;line-height:1.65;"></textarea>
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What support do you need most right now? *</label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">What support do you need most right now? *</label>
         <textarea name="support_needed" placeholder="Be as specific as you can — this helps us match you effectively." required style="width:100%;background:rgba(255,255,255,.03);border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:100px;resize:vertical;line-height:1.65;"></textarea>
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Links to your work <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Links to your work <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
         <input type="text" name="work_links" placeholder="Website, showreel, Vimeo, Instagram, IMDb..." style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
       </div>
       <div style="margin-bottom:2rem;">
-        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Anything else you want us to know? <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
+        <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Anything else you want us to know? <span style="color:rgba(255,255,255,.22);text-transform:none;letter-spacing:0;">(optional)</span></label>
         <textarea name="message" placeholder="Any context that helps us understand what you need." style="width:100%;background:rgba(255,255,255,.03);border:none;border-bottom:1.5px solid rgba(255,255,255,.18);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:90px;resize:vertical;line-height:1.65;"></textarea>
       </div>
       <p style="font-size:.7rem;color:rgba(255,255,255,.2);line-height:1.85;margin-bottom:1.8rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.07);">Your information will be used only to match you with a suitable mentor and communicate about the programme. We will never share your data with third parties.</p>
@@ -2806,25 +3138,25 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">First name *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">First name *</label>
             <input type="text" name="first_name" placeholder="Your first name" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;">
           </div>
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Last name *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Last name *</label>
             <input type="text" name="last_name" placeholder="Your last name" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;">
           </div>
         </div>
         <div style="margin-bottom:1.5rem;">
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Email address *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Email address *</label>
           <input type="email" name="email" placeholder="your@email.com" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Age * (18+)</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Age * (18+)</label>
             <input type="number" name="age" placeholder="e.g. 28" min="18" max="99" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
           </div>
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Based in *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Based in *</label>
             <input type="text" name="location" placeholder="City / town" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
           </div>
         </div>
@@ -2837,7 +3169,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <span style="font-size:.6rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;">Your Background</span>
         </div>
         <div style="margin-bottom:1.5rem;">
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Ethnic background *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Ethnic background *</label>
           <select name="background" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
             <option value="" disabled selected style="background:#141414;">Select one</option>
             <option style="background:#141414;">Black British</option>
@@ -2852,7 +3184,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           </select>
         </div>
         <div>
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Current situation *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Current situation *</label>
           <select name="current_situation" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
             <option value="" disabled selected style="background:#141414;">Select one</option>
             <option style="background:#141414;">Employed in a different industry — looking to transition into film/TV</option>
@@ -2873,7 +3205,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <span style="font-size:.6rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;">Your Experience</span>
         </div>
         <div style="margin-bottom:1.5rem;">
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Filmmaking experience *</label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Filmmaking experience *</label>
           <select name="experience" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
             <option value="" disabled selected style="background:#141414;">Select one</option>
             <option style="background:#141414;">No experience at all — this would be my first time</option>
@@ -2886,7 +3218,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Role interest *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Role interest *</label>
             <select name="role_interest" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
               <option value="" disabled selected style="background:#141414;">Select one</option>
               <option style="background:#141414;">Director</option>
@@ -2898,7 +3230,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
             </select>
           </div>
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Programme track *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Programme track *</label>
             <select name="track" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
               <option value="" disabled selected style="background:#141414;">Select one</option>
               <option style="background:#141414;">Production cohort — direct, shoot, produce</option>
@@ -2916,16 +3248,16 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           <span style="font-size:.6rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;">Your Story</span>
         </div>
         <div style="margin-bottom:1.5rem;">
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Why are you applying? * <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(150–300 words)</span></label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Why are you applying? * <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(150–300 words)</span></label>
           <p style="font-size:.75rem;color:rgba(255,255,255,.3);font-family:'DM Sans',sans-serif;margin-bottom:.6rem;line-height:1.6;">Tell us what brought you here. What are you hoping to get from this? There is no right answer.</p>
           <textarea name="why_apply" placeholder="Your story in your own words..." required style="width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:140px;resize:vertical;line-height:1.65;"></textarea>
         </div>
         <div style="margin-bottom:1.5rem;">
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">A story you want to tell <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">A story you want to tell <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
           <textarea name="story_idea" placeholder="A subject, a person, a moment — something you'd want to put on camera." style="width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:100px;resize:vertical;line-height:1.65;"></textarea>
         </div>
         <div>
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Your biggest barrier to getting into film/TV <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Your biggest barrier to getting into film/TV <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
           <textarea name="barrier" placeholder="Cost, time, not knowing the right people, confidence — whatever it is." style="width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:90px;resize:vertical;line-height:1.65;"></textarea>
         </div>
       </div>
@@ -2938,7 +3270,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Saturday availability *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Saturday availability *</label>
             <select name="availability" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
               <option value="" disabled selected style="background:#141414;">Select one</option>
               <option style="background:#141414;">Yes — I can commit to all 8 Saturdays</option>
@@ -2947,7 +3279,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
             </select>
           </div>
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">How did you hear about us?</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">How did you hear about us?</label>
             <select name="referral" style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
               <option value="" disabled selected style="background:#141414;">Select one</option>
               <option style="background:#141414;">Instagram</option>
@@ -2962,7 +3294,7 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
           </div>
         </div>
         <div>
-          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Anything else we should know? <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Anything else we should know? <span style="color:rgba(255,255,255,.25);font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
           <textarea name="anything_else" placeholder="Caring responsibilities, accessibility needs, or anything that might affect your participation." style="width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:90px;resize:vertical;line-height:1.65;"></textarea>
         </div>
       </div>

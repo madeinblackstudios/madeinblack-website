@@ -3150,15 +3150,70 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
           <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Email address *</label>
           <input type="email" name="email" placeholder="your@email.com" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Age * (18+)</label>
-            <input type="number" name="age" placeholder="e.g. 28" min="18" max="99" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Age *</label>
+            <input type="number" name="age" placeholder="e.g. 17" min="14" max="99" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
           </div>
           <div>
             <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Based in *</label>
             <input type="text" name="location" placeholder="City / town" required style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;">
           </div>
+        </div>
+
+        <!-- ARE YOU 18 OR OVER? -->
+        <div style="margin-bottom:1.5rem;">
+          <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.8rem;">Are you 18 or over? *</label>
+          <div style="display:flex;gap:2rem;">
+            <label style="display:flex;align-items:center;gap:.6rem;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.88rem;color:rgba(255,255,255,.65);">
+              <input type="radio" name="age_18_plus" value="Yes" required
+                style="appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.3);border-radius:50%;cursor:pointer;position:relative;flex-shrink:0;transition:border-color .2s;"
+                onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.3)'">
+              Yes
+            </label>
+            <label style="display:flex;align-items:center;gap:.6rem;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.88rem;color:rgba(255,255,255,.65);">
+              <input type="radio" name="age_18_plus" value="No"
+                style="appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.3);border-radius:50%;cursor:pointer;position:relative;flex-shrink:0;transition:border-color .2s;"
+                onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.3)'">
+              No
+            </label>
+          </div>
+        </div>
+
+        <!-- UNDER 18 FIELDS — shown only when No is selected -->
+        <div id="under-18-fields" style="display:none;padding:1.5rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);border-left:3px solid rgba(201,168,76,.5);margin-bottom:1.5rem;">
+          <p style="font-size:.78rem;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;line-height:1.65;margin-bottom:1.4rem;">As you are under 18, we need parental or guardian consent before you can attend. Please complete the details below.</p>
+
+          <div style="margin-bottom:1.2rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Parent / Guardian full name *</label>
+            <input type="text" name="parent_name"
+              placeholder="Full name of parent or guardian"
+              style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.15);color:#fff;padding:.75rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;"
+              onfocus="this.style.borderBottomColor='#C9A84C'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+
+          <div style="margin-bottom:1.2rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Parent / Guardian email address *</label>
+            <input type="email" name="parent_email"
+              placeholder="parent@email.com"
+              style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.15);color:#fff;padding:.75rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;"
+              onfocus="this.style.borderBottomColor='#C9A84C'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+
+          <div style="margin-bottom:1.4rem;">
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Parent / Guardian phone number *</label>
+            <input type="tel" name="parent_phone"
+              placeholder="+44"
+              style="width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(255,255,255,.15);color:#fff;padding:.75rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;"
+              onfocus="this.style.borderBottomColor='#C9A84C'" onblur="this.style.borderBottomColor='rgba(255,255,255,.15)'">
+          </div>
+
+          <label style="display:flex;align-items:flex-start;gap:.8rem;cursor:pointer;">
+            <input type="checkbox" name="parent_consent"
+              style="appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.3);border-radius:2px;cursor:pointer;flex-shrink:0;margin-top:2px;position:relative;transition:border-color .2s,background .2s;"
+              onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.3)'">
+            <span style="font-size:.82rem;color:rgba(255,255,255,.6);font-family:'DM Sans',sans-serif;line-height:1.6;">I confirm that my parent or guardian is aware of this application and gives permission for me to attend the ShootYourShort Intensive on Saturday 8 &amp; Sunday 9 May.</span>
+          </label>
         </div>
       </div>
 
@@ -3346,6 +3401,34 @@ document.addEventListener("DOMContentLoaded", function () {
     var id = window.location.hash.replace("#", "");
     var page = document.getElementById("page-" + id);
     if (page) go(id);
+  }
+
+  // ── Under-18 toggle ──
+  var ageYes = document.querySelector('input[name="age_18_plus"][value="Yes"]');
+  var ageNo  = document.querySelector('input[name="age_18_plus"][value="No"]');
+  var under18 = document.getElementById("under-18-fields");
+
+  if (ageYes && ageNo && under18) {
+    var parentInputs = under18.querySelectorAll("input");
+
+    function toggleUnder18() {
+      if (ageNo.checked) {
+        under18.style.display = "block";
+        parentInputs.forEach(function(input) {
+          if (input.name !== "parent_consent") {
+            input.required = true;
+          } else {
+            input.required = true; // consent checkbox also required
+          }
+        });
+      } else {
+        under18.style.display = "none";
+        parentInputs.forEach(function(input) { input.required = false; });
+      }
+    }
+
+    ageYes.addEventListener("change", toggleUnder18);
+    ageNo.addEventListener("change", toggleUnder18);
   }
 
   // ── Apply form AJAX — stays on page, no redirect ──

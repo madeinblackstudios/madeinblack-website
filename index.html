@@ -268,12 +268,60 @@ section{padding:3.5rem 4vw;}
 .p-body p{font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.58);font-weight:300;font-family:'DM Sans',sans-serif;}
 
 /* ── IMAGE BAND ── */
+/* img-band replaced by .mib-screen-band — never clips text */
 .img-band{position:relative;height:380px;overflow:hidden;}
 .img-band img{position:absolute;inset:0;}
 .img-band-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.95) 0%,rgba(8,8,8,.45) 55%,rgba(8,8,8,.1) 100%);}
 .img-band-content{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:0 5vw 4.5rem;z-index:2;text-align:center;}
 .img-band-text{max-width:620px;}
 .img-band-text .lbl{text-align:center;}
+
+/* =========================
+   MIB SCREENINGS BAND — SAFE LAYOUT (no clipping)
+   Uses normal flow so content dictates height.
+   Background image is decorative only.
+   ========================= */
+.mib-screen-band{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:stretch;
+}
+.mib-screen-band__bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  pointer-events:none;
+}
+.mib-screen-band__overlay{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.mib-screen-band__content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding:5rem 5vw;
+}
+.mib-screen-band__text{
+  max-width:520px;
+  text-align:right;
+}
+@media(max-width:768px){
+  .mib-screen-band__content{
+    justify-content:flex-start;
+    padding:3.5rem 5vw;
+  }
+  .mib-screen-band__text{
+    text-align:left;
+    max-width:100%;
+  }
+}
 
 /* ── FOUNDER ── */
 .founder-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:7rem;align-items:start;}
@@ -562,6 +610,8 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   .img-band{height:auto;min-height:320px;}
   .img-band-content{position:relative;padding:3.5rem 5vw;}
   .img-band img{position:absolute;opacity:.22;}
+  .mib-screen-band__content{padding:3rem 5vw;}
+  .mib-screen-band__text{max-width:100%;text-align:left;}
   .spotlight-wrap{grid-template-columns:1fr;gap:2rem;}
   .gold-strip{padding:4.5rem 5vw;}
   footer{padding:4.5rem 5vw 2.5rem;}
@@ -1534,16 +1584,21 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
   </div>
 
   <!-- ── MIB SCREENINGS ────────────────────────────────────────────────────── -->
-  <div class="img-band">
-    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop" alt="Cinema audience">
-    <div class="img-band-overlay" style="background:linear-gradient(to left,rgba(8,8,8,.9) 40%,rgba(8,8,8,.1))"></div>
-    <div class="img-band-content" style="justify-content:flex-end;">
-      <div class="img-band-text" style="text-align:right;">
+  <!-- =========================
+       HOME PAGE — MIB SCREENINGS BAND
+       Background image: cinema/audience photo
+       Text always fully visible — no clipping
+       ========================= -->
+  <div class="mib-screen-band">
+    <div class="mib-screen-band__bg" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop');"></div>
+    <div class="mib-screen-band__overlay" style="background:linear-gradient(to left,rgba(8,8,8,.96) 35%,rgba(8,8,8,.55) 65%,rgba(8,8,8,.15) 100%);"></div>
+    <div class="mib-screen-band__content">
+      <div class="mib-screen-band__text">
         <span class="lbl">Made In Black Screenings</span>
-        <h2 class="sh" style="font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.15;">Where work gets seen.<br><em>And filmmakers get better.</em></h2>
-        <p class="body-copy mt2" style="max-width:420px;">A regular community space — not a festival, not a competition. Quarterly screenings, script workshops and group feedback for Black and underrepresented filmmakers at every stage.</p>
-        <p class="body-copy" style="max-width:420px;margin-top:.7rem;font-size:.8rem;">Join our ever-growing community of filmmakers making real, meaningful work — and making their mark on the UK screen industry.</p>
-        <a href="#" class="btn btn-gold mt3" onclick="go('contact')" style="display:inline-block;">Join the Community</a>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:.5rem;">Where work gets seen.<br><em style="color:var(--gold);">And filmmakers get better.</em></h2>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75;font-family:'DM Sans',sans-serif;font-weight:300;max-width:420px;margin-top:1rem;">A regular community space — not a festival, not a competition. Quarterly screenings, script workshops and group feedback for Black and underrepresented filmmakers at every stage.</p>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7;font-family:'DM Sans',sans-serif;max-width:420px;margin-top:.7rem;">Join our ever-growing community of filmmakers making real, meaningful work — and making their mark on the UK screen industry.</p>
+        <a href="#" class="btn btn-gold" onclick="go('contact')" style="display:inline-block;margin-top:2rem;">Join the Community</a>
       </div>
     </div>
   </div>
@@ -1958,24 +2013,26 @@ footer{background:var(--dark);border-top:1px solid var(--gold-dim);padding:3rem 
     </div>
   </div>
 
-  <!-- MADE IN BLACK SCREENINGS -->
-  <div class="img-band" style="min-height:520px;">
-    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop" alt="MIB Screenings">
-    <div class="img-band-overlay" style="background:linear-gradient(to left,rgba(8,8,8,.94) 45%,rgba(8,8,8,.12))"></div>
-    <div class="img-band-content" style="justify-content:flex-end;">
-      <div class="img-band-text" style="text-align:right;max-width:480px;">
+  <!-- =========================
+       PROGRAMMES PAGE — MIB SCREENINGS BAND
+       Background image: cinema seats photo
+       Text always fully visible — no clipping
+       ========================= -->
+  <div class="mib-screen-band">
+    <div class="mib-screen-band__bg" style="background-image:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop');"></div>
+    <div class="mib-screen-band__overlay" style="background:linear-gradient(to left,rgba(8,8,8,.97) 40%,rgba(8,8,8,.7) 60%,rgba(8,8,8,.15) 100%);"></div>
+    <div class="mib-screen-band__content">
+      <div class="mib-screen-band__text">
         <span class="lbl">Community Screenings</span>
-        <h2 class="sh" style="font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.15;">Made In Black<br><em>Screenings.</em></h2>
-        <p class="body-copy mt2" style="max-width:420px;">A regular community space — not a festival, not a competition. We gather quarterly to watch, workshop and push each other's work forward. Scripts in development, rough cuts, finished films — all of it welcomed.</p>
-        <p class="body-copy" style="max-width:420px;margin-top:.8rem;">There is something powerful about showing your work to a room that understands it. It builds resilience, sharpens craft, and creates the relationships that quietly open doors.</p>
-        <ul style="list-style:none;padding:0;margin:.8rem 0 1rem;text-align:right;">
-          <li style="font-size:.8rem;color:rgba(255,255,255,0.6);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Quarterly screenings of works in progress and finished short films ◆</li>
-          <li style="font-size:.8rem;color:rgba(255,255,255,0.6);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Script workshops — writers hear their words read aloud and discussed ◆</li>
-          <li style="font-size:.8rem;color:rgba(255,255,255,0.6);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,0.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Structured group feedback that builds confidence, not doubt ◆</li>
-          <li style="font-size:.8rem;color:rgba(255,255,255,0.6);padding:.5rem 0;font-family:'DM Sans',sans-serif;line-height:1.5;">Free to attend. Open to all. Community-led. ◆</li>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;color:#fff;margin-bottom:.5rem;">Made In Black<br><em style="color:var(--gold);">Screenings.</em></h2>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.75;font-family:'DM Sans',sans-serif;font-weight:300;max-width:440px;margin-top:1rem;">Not a festival. Not a competition. We gather quarterly to watch, workshop and push each other's work forward — scripts in development, rough cuts, finished films. All of it welcomed.</p>
+        <ul style="list-style:none;padding:0;margin:1.2rem 0;text-align:right;">
+          <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Quarterly screenings of works in progress and finished films ◆</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Script workshops — writers hear their words discussed ◆</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'DM Sans',sans-serif;line-height:1.5;">Group feedback that builds confidence, not doubt ◆</li>
+          <li style="font-size:.8rem;color:rgba(255,255,255,.55);padding:.5rem 0;font-family:'DM Sans',sans-serif;line-height:1.5;">Free to attend. Open to all. Community-led. ◆</li>
         </ul>
-        <p style="font-size:.82rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;line-height:1.65;font-family:'DM Sans',sans-serif;">Join our ever-growing community of Black and underrepresented filmmakers making real, meaningful work — and making their mark on the UK screen industry.</p>
-        <a href="#" class="btn btn-gold mt3" onclick="go('contact')" style="display:inline-block;">Join the Community</a>
+        <a href="#" class="btn btn-gold" onclick="go('contact')" style="display:inline-block;margin-top:1rem;">Join the Community</a>
       </div>
     </div>
   </div>

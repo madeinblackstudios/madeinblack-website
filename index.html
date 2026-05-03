@@ -2401,7 +2401,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
         </div>
       </div>
       <div>
-        <form name="screenings-submission" method="POST" data-netlify="true" style="display:flex;flex-direction:column;gap:0;">
+        <form name="screenings-submission" method="POST" data-netlify="true" action="/" style="display:flex;flex-direction:column;gap:0;">
           <input type="hidden" name="form-name" value="screenings-submission">
           <div style="margin-bottom:1.4rem;">
             <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Your name *</label>
@@ -2946,7 +2946,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
       </div>
       <div class="contact-form">
         <h3 style="font-size:1rem;font-weight:700;color:var(--white);margin-bottom:2rem;letter-spacing:.05em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Send a Message</h3>
-        <form name="contact" method="POST" data-netlify="true" style="display:contents;">
+        <form name="contact" method="POST" data-netlify="true" action="/" style="display:contents;">
           <input type="hidden" name="form-name" value="contact">
           <input type="text" name="name" placeholder="Your full name" required>
           <input type="email" name="email" placeholder="Your email address" required>
@@ -3038,7 +3038,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
       <p style="font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;">MIB Mentorship connects Black and underrepresented creatives with working industry professionals. One hour a month can open a door that stays shut for years without it. Tell us where you are — we'll find the right match.</p>
     </div>
 
-    <form name="mentorship-interest" method="POST" data-netlify="true">
+    <form name="mentorship-interest" method="POST" data-netlify="true" action="/">
       <input type="hidden" name="form-name" value="mentorship-interest">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
@@ -3125,7 +3125,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
     </div>
 
     <!-- Form -->
-    <form name="shootyourshort-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="shootyourshort-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
       <input type="hidden" name="form-name" value="shootyourshort-application">
       <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
@@ -3270,12 +3270,14 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
           <div>
-            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Saturday availability *</label>
+            <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Are you available for both days? *</label>
+            <span style="font-size:.72rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Saturday 8 May &amp; Sunday 9 May — 10am to 5pm</span>
             <select name="availability" required style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
               <option value="" disabled selected style="background:#141414;">Select one</option>
-              <option style="background:#141414;">Yes — I can commit to all 8 Saturdays</option>
-              <option style="background:#141414;">Mostly — I may need to miss one session</option>
-              <option style="background:#141414;">I am not sure yet — I have some conflicts to confirm</option>
+              <option style="background:#141414;">Yes — I am available both days</option>
+              <option style="background:#141414;">Saturday 8 May only</option>
+              <option style="background:#141414;">Sunday 9 May only</option>
+              <option style="background:#141414;">I have a conflict but want to discuss</option>
             </select>
           </div>
           <div>

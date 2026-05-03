@@ -2401,7 +2401,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
         </div>
       </div>
       <div>
-        <form name="screenings-submission" method="POST" data-netlify="true" action="/" style="display:flex;flex-direction:column;gap:0;">
+        <form name="screenings-submission" method="POST" data-netlify="true" action="/?submitted=screenings#screenings" style="display:flex;flex-direction:column;gap:0;">
           <input type="hidden" name="form-name" value="screenings-submission">
           <div style="margin-bottom:1.4rem;">
             <label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.5rem;">Your name *</label>
@@ -2946,7 +2946,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
       </div>
       <div class="contact-form">
         <h3 style="font-size:1rem;font-weight:700;color:var(--white);margin-bottom:2rem;letter-spacing:.05em;text-transform:uppercase;font-family:'DM Sans',sans-serif;">Send a Message</h3>
-        <form name="contact" method="POST" data-netlify="true" action="/" style="display:contents;">
+        <form name="contact" method="POST" data-netlify="true" action="/?submitted=contact#contact" style="display:contents;">
           <input type="hidden" name="form-name" value="contact">
           <input type="text" name="name" placeholder="Your full name" required>
           <input type="email" name="email" placeholder="Your email address" required>
@@ -3038,7 +3038,7 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
       <p style="font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;">MIB Mentorship connects Black and underrepresented creatives with working industry professionals. One hour a month can open a door that stays shut for years without it. Tell us where you are — we'll find the right match.</p>
     </div>
 
-    <form name="mentorship-interest" method="POST" data-netlify="true" action="/">
+    <form name="mentorship-interest" method="POST" data-netlify="true" action="/?submitted=mentorship#mentorship">
       <input type="hidden" name="form-name" value="mentorship-interest">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
@@ -3125,8 +3125,8 @@ h1,h2,h3{overflow-wrap:break-word;word-wrap:break-word;}
     </div>
 
     <!-- Form -->
-    <form name="shootyourshort-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
-      <input type="hidden" name="form-name" value="shootyourshort-application">
+    <form name="apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="apply-form">
+      <input type="hidden" name="form-name" value="apply">
       <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
       <!-- Section style helper -->
@@ -3338,11 +3338,28 @@ function initFade(){
 }
 document.addEventListener('DOMContentLoaded',function(){
   initFade();
-  // Deep link — reads #apply, #programmes, #donate etc from URL
+
+  // Deep link — share /#apply, /#programmes etc directly
   if(window.location.hash){
     const id=window.location.hash.replace('#','');
     const page=document.getElementById('page-'+id);
     if(page) go(id);
+  }
+
+  // Show gold success banner after Netlify form submission
+  const params=new URLSearchParams(window.location.search);
+  const submitted=params.get('submitted');
+  if(submitted){
+    const pageMap={apply:'apply',mentorship:'mentorship',screenings:'screenings',contact:'contact'};
+    go(pageMap[submitted]||'home');
+    const banner=document.createElement('div');
+    banner.style.cssText='position:fixed;top:80px;left:50%;transform:translateX(-50%);z-index:9999;background:#C9A84C;color:#080808;padding:1rem 2.5rem;font-family:"DM Sans",sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-align:center;box-shadow:0 4px 32px rgba(0,0,0,.5);max-width:92vw;border-radius:2px;';
+    banner.textContent=submitted==='apply'
+      ? '✓ Application received — we will be in touch within 48 hours.'
+      : '✓ Message received — thank you. We will be in touch shortly.';
+    document.body.appendChild(banner);
+    setTimeout(()=>{banner.style.transition='opacity .5s';banner.style.opacity='0';setTimeout(()=>banner.remove(),500);},6000);
+    window.history.replaceState({},'',window.location.pathname+window.location.hash);
   }
 });
 function toggleNav(){
@@ -3354,6 +3371,64 @@ function pickTier(el){
   document.querySelectorAll('.tier').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
 }
+</script>
+
+<!-- =========================
+     APPLY FORM — AJAX SUBMIT
+     Intercepts submit, posts to Netlify via fetch,
+     shows success message without leaving the page.
+     Does NOT affect any other form on the site.
+     ========================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById("apply-form");
+  if (!form) return;
+
+  // Success message element — shown after submit
+  var successMsg = document.createElement("div");
+  successMsg.style.cssText = [
+    "display:none",
+    "margin-top:2rem",
+    "padding:1.6rem 2rem",
+    "background:rgba(201,168,76,.1)",
+    "border:1px solid rgba(201,168,76,.35)",
+    "border-left:3px solid #C9A84C",
+    "font-family:'DM Sans',sans-serif",
+    "font-size:.9rem",
+    "color:#fff",
+    "line-height:1.7"
+  ].join(";");
+  successMsg.innerHTML = "<strong style='color:#C9A84C;display:block;margin-bottom:.4rem;'>Application received ✓</strong>Thank you — we will be in touch within 48 hours. Keep an eye on your inbox.";
+  form.parentNode.insertBefore(successMsg, form.nextSibling);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var btn = form.querySelector("button[type=submit]");
+    if (btn) { btn.textContent = "Sending…"; btn.disabled = true; }
+
+    var formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(function (res) {
+      if (res.ok || res.status === 200 || res.redirected) {
+        form.style.display = "none";
+        successMsg.style.display = "block";
+        window.scrollTo({ top: successMsg.getBoundingClientRect().top + window.scrollY - 100, behavior: "smooth" });
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    })
+    .catch(function () {
+      if (btn) { btn.textContent = "Submit My Application →"; btn.disabled = false; }
+      alert("Sorry, something went wrong. Please try again or email hello@madeinblackstudios.com");
+    });
+  });
+});
 </script>
 </body>
 </html>

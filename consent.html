@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Consent — Made In Black Studios</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#080808;
+  --gold:#C9A84C;
+  --gold-light:#E2C068;
+  --gold-dim:rgba(201,168,76,0.15);
+  --dark:#0f0f0f;
+  --panel:#141414;
+  --white:#ffffff;
+  --muted:rgba(255,255,255,0.55);
+  --red:rgba(220,80,80,0.85);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--black);
+  color:var(--white);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── HEADER ── */
+header{
+  text-align:center;
+  padding:3rem 5vw 2rem;
+  border-bottom:1px solid var(--gold-dim);
+}
+
+.logo-wordmark{
+  font-family:'Playfair Display',serif;
+  font-size:.62rem;
+  font-weight:400;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  font-weight:900;
+  line-height:1.1;
+  margin-top:1.8rem;
+  color:var(--white);
+}
+
+header h1 em{
+  font-style:italic;
+  color:var(--gold);
+}
+
+.header-divider{
+  width:32px;height:1px;
+  background:var(--gold);
+  margin:1.4rem auto;
+  opacity:.6;
+}
+
+header p{
+  font-size:.88rem;
+  color:var(--muted);
+  font-weight:300;
+  line-height:1.75;
+  max-width:500px;
+  margin:0 auto;
+}
+
+/* ── IMPORTANT NOTICE ── */
+.notice{
+  background:rgba(201,168,76,.05);
+  border-left:2px solid var(--gold);
+  padding:1.2rem 1.8rem;
+  margin:2rem auto 0;
+  max-width:640px;
+  text-align:left;
+}
+
+.notice p{
+  font-size:.82rem;
+  color:rgba(255,255,255,.6);
+  line-height:1.75;
+  font-weight:300;
+}
+
+.notice strong{
+  color:var(--gold);
+  font-weight:500;
+}
+
+/* ── FORM WRAPPER ── */
+.form-wrap{
+  max-width:640px;
+  margin:0 auto;
+  padding:3rem 5vw 5rem;
+}
+
+/* ── SECTION TITLES ── */
+.form-section-title{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:1.5rem;
+  padding-bottom:.8rem;
+  border-bottom:1px solid var(--gold-dim);
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+}
+
+.form-section-title::before{
+  content:'';
+  display:block;
+  width:3px;
+  height:1rem;
+  background:var(--gold);
+  flex-shrink:0;
+}
+
+/* ── QUESTION BLOCKS ── */
+.q-block{
+  margin-bottom:2.2rem;
+}
+
+.q-label{
+  font-family:'Playfair Display',serif;
+  font-size:.98rem;
+  font-weight:700;
+  color:var(--white);
+  line-height:1.35;
+  display:block;
+  margin-bottom:.3rem;
+}
+
+.q-hint{
+  font-size:.75rem;
+  color:rgba(255,255,255,.28);
+  font-weight:300;
+  display:block;
+  margin-bottom:1rem;
+  letter-spacing:.01em;
+  line-height:1.6;
+}
+
+/* ── INPUTS ── */
+input[type="text"],
+input[type="email"],
+input[type="date"]{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  font-size:.92rem;
+  font-weight:300;
+  padding:.8rem 0;
+  outline:none;
+  transition:border-color .2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus{
+  border-bottom-color:var(--gold);
+}
+
+input::placeholder{ color:rgba(255,255,255,.18); }
+
+input[type="date"]{
+  color-scheme:dark;
+}
+
+/* ── CONSENT OPTIONS ── */
+.consent-options{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  margin-top:.5rem;
+}
+
+.consent-option{
+  display:flex;
+  align-items:flex-start;
+  gap:1rem;
+  cursor:pointer;
+  padding:1rem 1.2rem;
+  border:1px solid rgba(255,255,255,.08);
+  transition:border-color .2s, background .2s;
+}
+
+.consent-option:hover{
+  border-color:rgba(201,168,76,.3);
+  background:rgba(201,168,76,.03);
+}
+
+.consent-option input[type="radio"],
+.consent-option input[type="checkbox"]{
+  appearance:none;
+  -webkit-appearance:none;
+  width:16px;height:16px;
+  min-width:16px;
+  border:1px solid rgba(201,168,76,.35);
+  background:transparent;
+  cursor:pointer;
+  margin-top:2px;
+  position:relative;
+  transition:all .2s;
+  flex-shrink:0;
+}
+
+.consent-option input[type="radio"]{
+  border-radius:50%;
+}
+
+.consent-option input[type="radio"]:checked,
+.consent-option input[type="checkbox"]:checked{
+  background:var(--gold);
+  border-color:var(--gold);
+}
+
+.consent-option input[type="radio"]:checked::after{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:5px;height:5px;
+  border-radius:50%;
+  background:var(--black);
+}
+
+.consent-option input[type="checkbox"]:checked::after{
+  content:'✓';
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:.65rem;
+  color:var(--black);
+  font-weight:700;
+}
+
+.opt-text{ display:flex; flex-direction:column; gap:.2rem; }
+
+.opt-title{
+  font-size:.88rem;
+  font-weight:500;
+  color:var(--white);
+  line-height:1.3;
+}
+
+.opt-desc{
+  font-size:.76rem;
+  color:var(--muted);
+  font-weight:300;
+  line-height:1.5;
+}
+
+/* Highlight the NO option differently */
+.consent-option.no-option{
+  border-color:rgba(220,80,80,0.15);
+}
+.consent-option.no-option:hover{
+  border-color:rgba(220,80,80,0.35);
+  background:rgba(220,80,80,0.03);
+}
+.consent-option.no-option input[type="radio"]{
+  border-color:rgba(220,80,80,0.4);
+}
+.consent-option.no-option input[type="radio"]:checked{
+  background:rgba(220,80,80,0.85);
+  border-color:rgba(220,80,80,0.85);
+}
+.consent-option.no-option .opt-title{
+  color:rgba(255,200,200,0.85);
+}
+
+/* ── DIVIDER BETWEEN SECTIONS ── */
+.section-gap{
+  margin:3rem 0;
+  border:none;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+/* ── SIGNATURE BLOCK ── */
+.sig-info{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  padding:1.2rem 1.5rem;
+  margin-bottom:1.5rem;
+}
+
+.sig-info p{
+  font-size:.78rem;
+  color:rgba(255,255,255,.45);
+  line-height:1.75;
+  font-weight:300;
+}
+
+.sig-info strong{
+  color:rgba(255,255,255,.65);
+  font-weight:500;
+}
+
+/* ── SUBMIT ── */
+.submit-btn{
+  width:100%;
+  padding:1.1rem;
+  background:var(--gold);
+  color:var(--black);
+  font-family:'DM Sans',sans-serif;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  border:none;
+  cursor:pointer;
+  transition:all .25s;
+  margin-top:.5rem;
+}
+
+.submit-btn:hover{
+  background:var(--gold-light);
+  transform:translateY(-1px);
+}
+
+/* ── SUCCESS ── */
+#success-msg{
+  display:none;
+  text-align:center;
+  padding:4rem 2rem;
+}
+
+#success-msg .tick{
+  font-size:2.5rem;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+  display:block;
+}
+
+#success-msg h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:.8rem;
+  line-height:1.2;
+}
+
+#success-msg p{
+  font-size:.9rem;
+  color:var(--muted);
+  line-height:1.8;
+  font-weight:300;
+  max-width:400px;
+  margin:0 auto .6rem;
+}
+
+#success-msg .consent-summary{
+  font-size:.78rem;
+  color:rgba(201,168,76,.7);
+  margin-top:1.2rem;
+  font-style:italic;
+}
+
+/* ── FOOTER ── */
+.page-footer{
+  text-align:center;
+  padding:2rem 5vw;
+  border-top:1px solid var(--gold-dim);
+}
+
+.page-footer p{
+  font-size:.62rem;
+  color:rgba(255,255,255,.18);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  line-height:1.8;
+}
+
+.page-footer a{
+  color:rgba(201,168,76,.45);
+  text-decoration:none;
+}
+
+/* ── MOBILE ── */
+@media(max-width:600px){
+  header{ padding:2rem 5vw 1.5rem; }
+  .form-wrap{ padding:2rem 5vw 4rem; }
+  .q-block{ margin-bottom:1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-wordmark">Made In Black Studios · CIC</div>
+  <h1>Media &amp; Recording<br><em>Consent Form</em></h1>
+  <div class="header-divider"></div>
+  <p>We document our sessions to share the impact of this work and inspire more people to get involved. Please read and complete this form before today's session begins.</p>
+
+  <div class="notice">
+    <p><strong>Your choice is completely respected.</strong> If you do not consent to being filmed or photographed, please indicate below and we will ensure our crew are informed before recording begins. There is no pressure either way.</p>
+  </div>
+</header>
+
+<!-- FORM -->
+<div class="form-wrap">
+  <form id="consent-form" name="media-consent" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitConsent(event)">
+    <input type="hidden" name="form-name" value="media-consent">
+    <p style="display:none;"><input name="bot-field"></p>
+
+    <!-- ── PERSONAL DETAILS ── -->
+    <div class="form-section-title">Your Details</div>
+
+    <div class="q-block">
+      <label class="q-label" for="fullname">Full Name <span style="color:var(--gold);">*</span></label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+    </div>
+
+    <div class="q-block">
+      <label class="q-label" for="email">Email Address</label>
+      <span class="q-hint">So we can send you a copy of this consent for your records</span>
+      <input type="email" id="email" name="email" placeholder="your@email.com">
+    </div>
+
+    <div class="q-block">
+      <label class="q-label">Are you 18 or over? <span style="color:var(--gold);">*</span></label>
+      <div class="consent-options" style="margin-top:.8rem;">
+        <label class="consent-option">
+          <input type="radio" name="age" value="Yes — I am 18 or over" required>
+          <div class="opt-text">
+            <span class="opt-title">Yes — I am 18 or over</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="radio" name="age" value="No — I am under 18">
+          <div class="opt-text">
+            <span class="opt-title">No — I am under 18</span>
+            <span class="opt-desc">A parent or guardian will need to complete the section below</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- UNDER 18 GUARDIAN SECTION -->
+    <div id="guardian-section" style="display:none;margin-bottom:2.2rem;">
+      <div class="sig-info">
+        <p><strong>Parent / Guardian details required.</strong> If the participant is under 18, a parent or guardian must provide their name and confirm consent on their behalf.</p>
+      </div>
+      <div class="q-block">
+        <label class="q-label" for="guardian-name">Parent / Guardian Full Name</label>
+        <input type="text" id="guardian-name" name="guardian-name" placeholder="Full name">
+      </div>
+      <div class="q-block">
+        <label class="q-label" for="guardian-email">Parent / Guardian Email</label>
+        <input type="email" id="guardian-email" name="guardian-email" placeholder="their@email.com">
+      </div>
+    </div>
+
+    <hr class="section-gap">
+
+    <!-- ── MEDIA CONSENT ── -->
+    <div class="form-section-title">Photography &amp; Video</div>
+
+    <div class="q-block">
+      <label class="q-label">Please choose your preference <span style="color:var(--gold);">*</span></label>
+      <span class="q-hint">This covers photos, video footage and audio recordings taken during the session</span>
+
+      <div class="consent-options">
+        <label class="consent-option">
+          <input type="radio" name="media-consent" value="Full consent — photos, video and audio" required>
+          <div class="opt-text">
+            <span class="opt-title">✓ Full consent</span>
+            <span class="opt-desc">You can photograph me, film me and record my voice during the session</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="radio" name="media-consent" value="Photos only — no video or audio">
+          <div class="opt-text">
+            <span class="opt-title">Photos only</span>
+            <span class="opt-desc">You can take photos of me, but please do not film or record my voice</span>
+          </div>
+        </label>
+        <label class="consent-option no-option">
+          <input type="radio" name="media-consent" value="No consent — please do not film or photograph me">
+          <div class="opt-text">
+            <span class="opt-title">No — please do not film or photograph me</span>
+            <span class="opt-desc">I do not wish to appear in any photos or videos from this session</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <hr class="section-gap">
+
+    <!-- ── PROMOTIONAL USE ── -->
+    <div class="form-section-title">How We May Use It</div>
+
+    <div class="q-block">
+      <label class="q-label">Where can we use photos and videos of you? <span style="color:var(--gold);">*</span></label>
+      <span class="q-hint">Tick all that apply — or none if you've chosen not to be filmed above</span>
+
+      <div class="consent-options">
+        <label class="consent-option">
+          <input type="checkbox" name="use-social" value="Social media (Instagram, TikTok, Facebook, YouTube)">
+          <div class="opt-text">
+            <span class="opt-title">Social media</span>
+            <span class="opt-desc">Instagram, TikTok, Facebook, YouTube</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="checkbox" name="use-website" value="Made In Black Studios website">
+          <div class="opt-text">
+            <span class="opt-title">Our website</span>
+            <span class="opt-desc">madeinblackstudios.com</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="checkbox" name="use-funding" value="Funding applications and reports">
+          <div class="opt-text">
+            <span class="opt-title">Funding applications &amp; reports</span>
+            <span class="opt-desc">Arts Council, BFI, local authority applications and impact reports</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="checkbox" name="use-press" value="Press and media coverage">
+          <div class="opt-text">
+            <span class="opt-title">Press &amp; media coverage</span>
+            <span class="opt-desc">Newspapers, magazines, broadcast features about our work</span>
+          </div>
+        </label>
+        <label class="consent-option">
+          <input type="checkbox" name="use-tagging" value="Tagged on social media by name">
+          <div class="opt-text">
+            <span class="opt-title">Tag me by name on social media</span>
+            <span class="opt-desc">We can mention or tag your name / Instagram handle when sharing</span>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <hr class="section-gap">
+
+    <!-- ── SIGNATURE ── */-->
+    <div class="form-section-title">Your Agreement</div>
+
+    <div class="sig-info">
+      <p>By submitting this form you confirm that:<br><br>
+      <strong>1.</strong> The information above is accurate and given freely without pressure.<br>
+      <strong>2.</strong> You understand you can withdraw consent at any time by emailing <strong>hello@madeinblackstudios.com</strong> — though we may not be able to remove content already published.<br>
+      <strong>3.</strong> This consent covers today's session and any future Made In Black Studios sessions you attend, unless you contact us to change it.<br>
+      <strong>4.</strong> Made In Black Studios CIC will store this information securely in line with UK GDPR and will not share it with third parties.</p>
+    </div>
+
+    <div class="q-block">
+      <label class="q-label" for="signature">Type your full name as your digital signature <span style="color:var(--gold);">*</span></label>
+      <span class="q-hint">Typing your name here confirms you have read and agreed to the above</span>
+      <input type="text" id="signature" name="signature" placeholder="Your full name" required>
+    </div>
+
+    <div class="q-block">
+      <label class="q-label" for="sig-date">Today's date <span style="color:var(--gold);">*</span></label>
+      <input type="date" id="sig-date" name="sig-date" required>
+    </div>
+
+    <!-- SUBMIT -->
+    <button type="submit" class="submit-btn">Submit My Consent</button>
+    <p style="font-size:.72rem;color:rgba(255,255,255,.2);text-align:center;margin-top:1rem;line-height:1.7;">Made In Black Studios CIC · Company No. 17185100 · UK GDPR compliant</p>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div id="success-msg">
+    <span class="tick">◆</span>
+    <h2>Consent Received.<br><em>Thank you.</em></h2>
+    <p>Your preferences have been recorded and our team will be informed before the session begins.</p>
+    <p>If you have any questions or want to update your preferences at any time, email us at <strong style="color:var(--gold);">hello@madeinblackstudios.com</strong></p>
+    <p class="consent-summary" id="consent-summary"></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <p>Made In Black Studios CIC · Company No. 17185100<br>
+  <a href="https://madeinblackstudios.com">madeinblackstudios.com</a> · hello@madeinblackstudios.com<br>
+  This form is stored securely and processed in line with UK GDPR</p>
+</div>
+
+<script>
+// Show guardian section if under 18 selected
+document.querySelectorAll('input[name="age"]').forEach(function(radio){
+  radio.addEventListener('change', function(){
+    var gs = document.getElementById('guardian-section');
+    gs.style.display = this.value === 'No — I am under 18' ? 'block' : 'none';
+  });
+});
+
+// Set today's date as default
+var today = new Date().toISOString().split('T')[0];
+document.getElementById('sig-date').value = today;
+
+// Submit
+function submitConsent(e){
+  e.preventDefault();
+
+  var form = document.getElementById('consent-form');
+  var mediaConsent = document.querySelector('input[name="media-consent"]:checked');
+
+  if(!mediaConsent){
+    alert('Please select your photography and video preference.');
+    return;
+  }
+
+  var data = new FormData(form);
+
+  fetch('/', {
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(data).toString()
+  })
+  .then(function(){
+    form.style.display = 'none';
+    var msg = document.getElementById('success-msg');
+    var summary = document.getElementById('consent-summary');
+    summary.textContent = 'Your choice: ' + mediaConsent.value;
+    msg.style.display = 'block';
+    msg.style.opacity = '0';
+    msg.style.transition = 'opacity .6s ease';
+    setTimeout(function(){ msg.style.opacity = '1'; }, 50);
+    window.scrollTo({top:0, behavior:'smooth'});
+  })
+  .catch(function(err){
+    alert('Something went wrong. Please try again or email hello@madeinblackstudios.com');
+    console.error(err);
+  });
+}
+</script>
+
+</body>
+</html>

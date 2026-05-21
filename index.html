@@ -2495,6 +2495,376 @@ nav{min-height:88px;}
   .hero-btns .btn,.final-cta-btns .btn{width:100%;text-align:center;}
   .photo-credit,.credit-tag{font-size:.42rem!important;max-width:70%;}
 }
+
+
+/* =========================================================
+   V13 SOFT-GREY FINAL POLISH — calm contrast, premium motion
+   ========================================================= */
+:root{
+  --stone:#e8e5dc;
+  --stone-2:#d6d1c4;
+  --stone-3:#f3f1eb;
+  --stone-ink:#111111;
+  --stone-muted:rgba(17,17,17,.66);
+}
+
+/* Loud gold blocks become warm gallery-grey panels; gold remains as accent only */
+.gold-panel{
+  background:
+    linear-gradient(135deg,rgba(243,241,235,.98) 0%,rgba(216,211,196,.95) 100%)!important;
+  color:var(--stone-ink)!important;
+  border-top:1px solid rgba(255,255,255,.18)!important;
+  border-bottom:1px solid rgba(0,0,0,.12)!important;
+}
+.gold-panel::before{
+  background-image:
+    radial-gradient(ellipse 70% 60% at 12% 8%,rgba(201,168,76,.16),transparent 58%),
+    radial-gradient(ellipse 65% 50% at 100% 90%,rgba(8,8,8,.08),transparent 58%),
+    linear-gradient(135deg,rgba(255,255,255,.45),transparent 42%)!important;
+  opacity:1!important;
+  z-index:0!important;
+}
+.gold-panel::after{
+  opacity:.055!important;
+  mix-blend-mode:multiply!important;
+  filter:grayscale(1) contrast(1.15)!important;
+  z-index:0!important;
+}
+.gold-panel>*{position:relative;z-index:1;}
+.gold-panel .lbl,
+.gold-panel .strand-cat,
+.gold-panel .kicker,
+.gold-panel .prog-cat,
+.gold-panel .blog-tag,
+.gold-panel .project-eyebrow{
+  color:rgba(17,17,17,.55)!important;
+}
+.gold-panel h1,.gold-panel h2,.gold-panel h3,.gold-panel h4,
+.gold-panel .sh,.gold-panel .pull-line,.gold-panel .final-cta-headline{
+  color:var(--stone-ink)!important;
+}
+.gold-panel em,.gold-panel .gold-text{color:rgba(128,96,24,.92)!important;}
+.gold-panel p,.gold-panel .body-copy,.gold-panel .c-val,.gold-panel li,
+.gold-panel .impact-label,.gold-panel .final-cta-sub{
+  color:var(--stone-muted)!important;
+}
+.gold-panel .divider,
+.gold-panel .divider-left{background:rgba(128,96,24,.55)!important;}
+.gold-panel .btn-gold,
+.gold-panel .final-btn-primary{
+  background:var(--black)!important;
+  color:var(--gold)!important;
+  border:1px solid rgba(0,0,0,.9)!important;
+}
+.gold-panel .btn-wire,
+.gold-panel .btn-wire-gold,
+.gold-panel .final-btn-secondary{
+  color:var(--stone-ink)!important;
+  border-color:rgba(17,17,17,.28)!important;
+  background:rgba(255,255,255,.12)!important;
+}
+.gold-panel .btn-wire:hover,
+.gold-panel .btn-wire-gold:hover,
+.gold-panel .final-btn-secondary:hover{
+  background:rgba(17,17,17,.07)!important;
+  border-color:rgba(17,17,17,.48)!important;
+}
+.gold-panel .impact-metric,.gold-panel .testimonial-card,.gold-panel .pathway,
+.gold-panel .value,.gold-panel .support-card,.gold-panel .prog-card,
+.gold-panel .blog-card,.gold-panel .gi-card{
+  background:rgba(255,255,255,.40)!important;
+  border-color:rgba(17,17,17,.08)!important;
+}
+.gold-panel .impact-metric *, .gold-panel .testimonial-card *, .gold-panel .pathway *,
+.gold-panel .value *, .gold-panel .support-card *, .gold-panel .prog-card *,
+.gold-panel .blog-card *, .gold-panel .gi-card *{
+  color:rgba(17,17,17,.72)!important;
+}
+.gold-panel .amt,.gold-panel .impact-num{color:rgba(128,96,24,.95)!important;}
+
+/* Add life to dark pages without flattening into solid black */
+.cinematic-surface:not(.gold-panel)::before{
+  opacity:.95;
+}
+.cinematic-surface:not(.gold-panel)::after{
+  opacity:.07;
+}
+.soft-texture{
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 0%,rgba(201,168,76,.06),transparent 60%),
+    radial-gradient(ellipse 65% 55% at 95% 100%,rgba(255,255,255,.035),transparent 62%),
+    rgba(10,10,10,.98)!important;
+}
+section:not(.gold-panel) .funder-box,
+.waitlist-panel,
+.contact-form,
+.donate-block{
+  backdrop-filter:blur(2px);
+}
+
+/* Better readability across text-heavy areas */
+.body-copy,p,.project-flow-copy,.blog-body p,.activity-copy p,.team-info .bio{line-height:1.82;}
+.story-panel p,.qa-block p,.funder-box p{max-width:68ch;}
+.story-flow{gap:clamp(2rem,4vw,4.8rem)!important;}
+.story-panel{align-self:center;}
+
+/* Premium motion: cinematic, smooth, not gimmicky */
+.hero-video video,.page-hero .bg img,.flagship-band img,.community-hero img,.video-player-card img{
+  transform:scale(1.035);
+  animation:cinemaBreath 18s ease-in-out infinite alternate;
+  will-change:transform;
+}
+@keyframes cinemaBreath{
+  from{transform:scale(1.025) translate3d(0,0,0);}
+  to{transform:scale(1.075) translate3d(0,-1.2%,0);}
+}
+.project-flow-card,.activity-card,.blog-founder-card,.story-panel.image,.waitlist-panel,
+.prog-card,.screen-card,.blog-card,.support-card,.community-cta-card,.pathway-row{
+  transition:transform .45s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease, background .35s ease;
+}
+.project-flow-card:hover,.activity-card:hover,.blog-founder-card:hover,.story-panel.image:hover,
+.prog-card:hover,.screen-card:hover,.blog-card:hover,.support-card:hover,.community-cta-card:hover,.pathway-row:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 55px rgba(0,0,0,.28);
+}
+.lightbox-img{cursor:zoom-in;}
+
+/* Photo credits: quiet bottom-corner editorial credit, not a label */
+.photo-credit,.credit-tag,.image-credit{
+  position:absolute!important;
+  right:.8rem!important;
+  bottom:.7rem!important;
+  left:auto!important;
+  top:auto!important;
+  z-index:6!important;
+  background:linear-gradient(to left,rgba(0,0,0,.42),rgba(0,0,0,.12))!important;
+  border:none!important;
+  border-left:1px solid rgba(255,255,255,.16)!important;
+  padding:.22rem .52rem!important;
+  font-size:.42rem!important;
+  letter-spacing:.10em!important;
+  text-transform:none!important;
+  font-style:italic!important;
+  color:rgba(255,255,255,.50)!important;
+  backdrop-filter:blur(5px)!important;
+  pointer-events:none!important;
+  opacity:.62!important;
+}
+figure:hover .photo-credit, figure:hover .credit-tag,
+.activity-card:hover .credit-tag,.project-flow-card:hover .photo-credit{
+  opacity:.86!important;
+  color:rgba(255,255,255,.72)!important;
+}
+.photo-credit::before,.credit-tag::before,.image-credit::before{content:''!important;}
+
+/* Forms and CTAs */
+.contact-form input,.contact-form textarea,.contact-form select,
+.waitlist-panel input,.waitlist-panel textarea,.waitlist-panel select,
+.project-waitlist-lite input,.project-waitlist-lite textarea,.project-waitlist-lite select{min-height:46px;}
+button,.btn{border-radius:0;}
+.btn,.final-btn-primary,.final-btn-secondary{box-shadow:0 10px 26px rgba(0,0,0,.18);}
+.btn:hover{transform:translateY(-2px);}
+
+/* Logo presence */
+.nav-logo img{max-height:58px!important;width:auto!important;object-fit:contain!important;}
+@media(max-width:960px){.nav-logo img{max-height:48px!important;}}
+
+/* Mobile precision */
+@media(max-width:960px){
+  section{padding:4rem 5vw;}
+  .hero h1{font-size:clamp(3rem,13vw,4.8rem);}
+  .hero-sub{font-size:.96rem;max-width:95%;}
+  .hero-btns{width:100%;gap:.85rem;}
+  .hero-btns .btn{width:100%;max-width:360px;text-align:center;}
+  .story-flow,.founder-grid,.contact-grid,.mission-grid,.tda-section,.infocus-feature{grid-template-columns:1fr!important;}
+  .project-flow-card:hover,.activity-card:hover,.blog-founder-card:hover,.story-panel.image:hover,
+  .prog-card:hover,.screen-card:hover,.blog-card:hover,.support-card:hover,.community-cta-card:hover,.pathway-row:hover{transform:none;box-shadow:none;}
+  .page-hero{min-height:390px;}
+  .page-hero .txt{text-align:left!important;}
+  .page-hero .txt .divider{margin-left:0!important;}
+  .photo-credit,.credit-tag,.image-credit{font-size:.38rem!important;max-width:76%!important;}
+}
+@media(max-width:540px){
+  nav{padding:.8rem 4vw;}
+  .page{padding-top:60px;}
+  section{padding:3.2rem 5vw;}
+  .sh-xl{font-size:clamp(2.35rem,12vw,3.4rem);}
+  .sh{font-size:clamp(1.9rem,9vw,2.6rem);}
+  .body-copy{font-size:.92rem;line-height:1.78;}
+  .hero-content{padding-bottom:4rem;}
+  .gallery-slide{width:220px;height:170px;}
+  .community-cards,.impact-metrics,.testimonial-grid,.bts-grid,.activity-grid,.gi-grid{grid-template-columns:1fr!important;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}
+}
+
+
+
+/* =========================================================
+   V14 FINAL TONE FIX — soft transparent gold, no grey slabs, no tile patterns
+   ========================================================= */
+:root{
+  --soft-gold-panel:rgba(201,168,76,.105);
+  --soft-gold-panel-2:rgba(226,192,104,.065);
+  --soft-gold-line:rgba(201,168,76,.22);
+}
+
+/* Restore the elegant amber rhythm: not loud yellow, not flat grey. */
+.gold-panel{
+  background:
+    linear-gradient(135deg,rgba(201,168,76,.13) 0%,rgba(226,192,104,.075) 48%,rgba(8,8,8,.94) 100%)!important;
+  color:var(--white)!important;
+  border-top:1px solid var(--soft-gold-line)!important;
+  border-bottom:1px solid rgba(201,168,76,.14)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important;
+}
+.gold-panel::before{
+  background:
+    radial-gradient(ellipse 70% 55% at 10% 0%,rgba(201,168,76,.16),transparent 60%),
+    radial-gradient(ellipse 55% 50% at 100% 90%,rgba(201,168,76,.075),transparent 60%),
+    linear-gradient(135deg,rgba(255,255,255,.035),transparent 40%)!important;
+  opacity:1!important;
+}
+.gold-panel::after{
+  opacity:.055!important;
+  mix-blend-mode:screen!important;
+  filter:grayscale(.8) contrast(1.05) brightness(.7)!important;
+}
+.gold-panel .lbl,.gold-panel .strand-cat,.gold-panel .kicker,.gold-panel .prog-cat,.gold-panel .blog-tag,.gold-panel .project-eyebrow{
+  color:rgba(201,168,76,.86)!important;
+}
+.gold-panel h1,.gold-panel h2,.gold-panel h3,.gold-panel h4,.gold-panel .sh,.gold-panel .pull-line,.gold-panel .final-cta-headline{
+  color:var(--white)!important;
+}
+.gold-panel em,.gold-panel .gold-text,.gold-panel .amt,.gold-panel .impact-num{
+  color:var(--gold)!important;
+}
+.gold-panel p,.gold-panel .body-copy,.gold-panel .c-val,.gold-panel li,.gold-panel .impact-label,.gold-panel .final-cta-sub{
+  color:rgba(255,255,255,.66)!important;
+}
+.gold-panel .divider,.gold-panel .divider-left{background:rgba(201,168,76,.65)!important;}
+.gold-panel .btn-gold,.gold-panel .final-btn-primary{
+  background:var(--gold)!important;
+  color:var(--black)!important;
+  border:1px solid rgba(201,168,76,.65)!important;
+}
+.gold-panel .btn-wire,.gold-panel .btn-wire-gold,.gold-panel .final-btn-secondary{
+  color:var(--gold)!important;
+  border-color:rgba(201,168,76,.35)!important;
+  background:rgba(8,8,8,.18)!important;
+}
+.gold-panel .btn-wire:hover,.gold-panel .btn-wire-gold:hover,.gold-panel .final-btn-secondary:hover{
+  background:rgba(201,168,76,.08)!important;
+  border-color:rgba(201,168,76,.6)!important;
+}
+.gold-panel .impact-metric,.gold-panel .testimonial-card,.gold-panel .pathway,.gold-panel .value,.gold-panel .support-card,.gold-panel .prog-card,.gold-panel .blog-card,.gold-panel .gi-card{
+  background:rgba(8,8,8,.50)!important;
+  border-color:rgba(201,168,76,.14)!important;
+  backdrop-filter:blur(2px);
+}
+.gold-panel .impact-metric *, .gold-panel .testimonial-card *, .gold-panel .pathway *, .gold-panel .value *, .gold-panel .support-card *, .gold-panel .prog-card *, .gold-panel .blog-card *, .gold-panel .gi-card *{
+  color:rgba(255,255,255,.72)!important;
+}
+
+/* Kill the tiled/striped decorative patterns. Keep only cinematic image/radial texture. */
+.blog-section::before,.mail-strip::before{
+  background:none!important;
+  background-image:none!important;
+}
+section::before,section::after,.cinematic-surface::before,.cinematic-surface::after{
+  background-repeat:no-repeat!important;
+}
+
+/* Make dark sections feel alive without ugly pattern tiles. */
+.soft-texture{
+  background:
+    radial-gradient(ellipse 80% 55% at 12% 5%,rgba(201,168,76,.07),transparent 62%),
+    radial-gradient(ellipse 60% 50% at 95% 100%,rgba(201,168,76,.045),transparent 62%),
+    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,0) 32%),
+    rgba(8,8,8,.985)!important;
+}
+.cinematic-surface:not(.gold-panel)::before{
+  background:
+    radial-gradient(ellipse 75% 45% at 15% 0%,rgba(201,168,76,.07),transparent 65%),
+    radial-gradient(ellipse 60% 50% at 90% 100%,rgba(255,255,255,.025),transparent 65%)!important;
+  opacity:1!important;
+}
+.cinematic-surface:not(.gold-panel)::after{
+  opacity:.045!important;
+  mix-blend-mode:screen!important;
+}
+
+/* Keep image credits tiny, bottom-corner, and editorial. */
+.photo-credit,.credit-tag,.image-credit{
+  right:.75rem!important;
+  bottom:.65rem!important;
+  background:rgba(0,0,0,.24)!important;
+  border:none!important;
+  padding:.18rem .42rem!important;
+  font-size:.40rem!important;
+  letter-spacing:.08em!important;
+  opacity:.55!important;
+  text-transform:none!important;
+  font-style:italic!important;
+  color:rgba(255,255,255,.58)!important;
+}
+figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:hover .photo-credit{opacity:.82!important;}
+
+/* Final readability tune after removing grey panels */
+.gold-panel .body-copy{max-width:720px;}
+.gold-panel input,.gold-panel textarea,.gold-panel select{
+  color:var(--white)!important;
+  border-bottom-color:rgba(201,168,76,.35)!important;
+}
+.gold-panel input::placeholder,.gold-panel textarea::placeholder{color:rgba(255,255,255,.32)!important;}
+@media(max-width:540px){
+  .gold-panel{background:linear-gradient(160deg,rgba(201,168,76,.12),rgba(8,8,8,.96) 72%)!important;}
+}
+
+
+
+/* =========================================================
+   V15 REQUESTED TUNE — more visible homepage imagery, softer CTA, Home Away thumbnail crop
+   ========================================================= */
+/* Make homepage textured photographs more present while protecting text readability */
+#page-home .section-bg-img img{
+  opacity:.82!important;
+  filter:brightness(.48) saturate(.96) contrast(1.04)!important;
+}
+#page-home .section-bg-img::after{
+  background:linear-gradient(90deg,rgba(8,8,8,.88),rgba(8,8,8,.55),rgba(8,8,8,.84))!important;
+}
+#page-home .home-who-section::before{
+  opacity:.34!important;
+  filter:brightness(.82) saturate(.92)!important;
+}
+#page-home .cinematic-surface:not(.gold-panel)::after{
+  opacity:.075!important;
+}
+#page-home .tda-section::before,
+#page-home .impact-section::before,
+#page-home .testimonial-strip::before,
+#page-home .social-section::before{
+  opacity:.09!important;
+  filter:brightness(.68) saturate(.85)!important;
+}
+/* Keep the final CTA warm and textured, not solid yellow */
+#page-home .cinematic-surface h2[style*="Ready to grow"] em{color:var(--gold)!important;}
+#page-home .cinematic-surface h2[style*="Ready to grow"] + div + p{color:rgba(255,255,255,.68)!important;}
+/* Home Away thumbnail composition */
+.video-player-card img{
+  object-position:center 40%!important;
+}
+/* Slightly more polished final CTA buttons */
+#page-home .cinematic-surface h2[style*="Ready to grow"] ~ div .btn{
+  box-shadow:0 18px 42px rgba(0,0,0,.26)!important;
+}
+@media(max-width:720px){
+  #page-home .section-bg-img img{opacity:.64!important;filter:brightness(.42) saturate(.9)!important;}
+  #page-home .home-who-section::before{opacity:.24!important;}
+}
+
 </style>
 </head>
 <body>
@@ -2963,17 +3333,17 @@ nav{min-height:88px;}
 </div>
 </div>
 <!-- ── FINAL CTA STRIP ────────────────────────────────────────────────────── -->
-<div class="cinematic-surface" style="position:relative;overflow:hidden;padding:8rem 4vw;text-align:center;background:var(--gold);">
-<div style="position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg');background-size:cover;background-position:center top;opacity:.22;mix-blend-mode:multiply;"></div>
-<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.97) 0%,rgba(180,148,56,.93) 100%);"></div>
+<div class="cinematic-surface" style="position:relative;overflow:hidden;padding:8rem 4vw;text-align:center;background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(8,8,8,.94) 78%);border-top:1px solid rgba(201,168,76,.24);border-bottom:1px solid rgba(201,168,76,.18);">
+<div style="position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg');background-size:cover;background-position:center top;opacity:.28;mix-blend-mode:screen;filter:brightness(.72) saturate(.95);"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,8,.18) 0%,rgba(8,8,8,.74) 100%),radial-gradient(ellipse 70% 60% at 42% 20%,rgba(201,168,76,.26),transparent 68%);"></div>
 <div style="position:relative;z-index:2;max-width:720px;margin:0 auto;">
-<span style="display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:rgba(8,8,8,.45);font-family:'DM Sans',sans-serif;margin-bottom:1.8rem;">Made In Black Studios · CIC</span>
-<h2 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:900;line-height:.97;color:var(--black);margin-bottom:1.2rem;letter-spacing:-.02em;">Ready to grow<br/><em>with us?</em></h2>
-<div style="width:40px;height:2px;background:rgba(8,8,8,.3);margin:1.6rem auto;"></div>
-<p style="font-size:.92rem;color:rgba(0,0,0,.55);max-width:440px;margin:0 auto 2.8rem;line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;">Training, mentorship and community for Black and underrepresented creatives ready to build careers in the UK screen industries.</p>
+<span style="display:inline-block;font-size:.55rem;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:rgba(201,168,76,.82);font-family:'DM Sans',sans-serif;margin-bottom:1.8rem;">Made In Black Studios · CIC</span>
+<h2 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:900;line-height:.97;color:var(--white);margin-bottom:1.2rem;letter-spacing:-.02em;">Ready to grow<br/><em>with us?</em></h2>
+<div style="width:40px;height:2px;background:rgba(201,168,76,.5);margin:1.6rem auto;"></div>
+<p style="font-size:.92rem;color:rgba(255,255,255,.68);max-width:440px;margin:0 auto 2.8rem;line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;">Training, mentorship and community for Black and underrepresented creatives ready to build careers in the UK screen industries.</p>
 <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
 <a class="btn" href="#" onclick="go('apply')" style="background:var(--black);color:var(--gold);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Join the Waitlist</a>
-<a class="btn" href="#" onclick="go('getinvolved')" style="background:transparent;color:var(--black);border:1.5px solid rgba(0,0,0,.3);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Join the Community</a>
+<a class="btn" href="#" onclick="go('getinvolved')" style="background:transparent;color:var(--gold);border:1.5px solid rgba(201,168,76,.38);padding:1rem 2.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Join the Community</a>
 </div>
 </div>
 </div>
@@ -3042,7 +3412,7 @@ nav{min-height:88px;}
 <p class="mt1">That question became practical. Not just films about belonging, but spaces where belonging can actually happen.</p>
 </div>
 <figure aria-label="Play Home Away documentary" class="story-panel image fade-in video-player-card" data-youtube="https://www.youtube.com/embed/XB_B-Y1qkzA?start=1&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
-<img alt="Home Away documentary thumbnail" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779373343/4_hnuaqh.jpg"/>
+<img alt="Home Away documentary thumbnail" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779371013/19_wj2xoa.jpg"/>
 <div class="video-play-ui"><div class="video-play-button"><span></span></div></div>
 <div class="video-player-label">Watch Home Away</div>
 </figure>

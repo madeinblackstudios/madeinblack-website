@@ -2865,6 +2865,64 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
   #page-home .home-who-section::before{opacity:.24!important;}
 }
 
+
+
+/* =========================================================
+   FINAL V16 POLISH — credits, cinematic CTA, waitlist clarity
+   ========================================================= */
+.photo-credit,.credit-tag,.image-credit{
+  opacity:.96!important;
+  color:rgba(255,255,255,.82)!important;
+  background:rgba(8,8,8,.58)!important;
+  border-left:1px solid rgba(201,168,76,.46)!important;
+  padding:.3rem .62rem!important;
+  font-size:.52rem!important;
+  line-height:1.35!important;
+  letter-spacing:.08em!important;
+  text-shadow:0 1px 12px rgba(0,0,0,.75)!important;
+  backdrop-filter:blur(8px)!important;
+}
+figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:hover .photo-credit{
+  opacity:1!important;
+  color:rgba(255,255,255,.95)!important;
+  background:rgba(8,8,8,.68)!important;
+}
+.tda-mantra span:nth-child(1){color:rgba(255,255,255,.84)!important;}
+.tda-mantra span:nth-child(2){color:rgba(255,255,255,.76)!important;text-shadow:none!important;}
+.tda-mantra span:nth-child(3){
+  color:var(--gold)!important;
+  -webkit-text-stroke:0!important;
+  font-size:clamp(3.4rem,5.8vw,5.8rem)!important;
+  letter-spacing:-.035em!important;
+  text-shadow:0 0 44px rgba(201,168,76,.20), 0 12px 40px rgba(0,0,0,.45)!important;
+}
+.final-grow-cta{
+  background:linear-gradient(135deg,rgba(201,168,76,.34),rgba(8,8,8,.94) 76%)!important;
+  border-top:1px solid rgba(201,168,76,.34)!important;
+  border-bottom:1px solid rgba(201,168,76,.26)!important;
+}
+.final-grow-cta > div:first-child{
+  opacity:.40!important;
+  mix-blend-mode:screen!important;
+  filter:brightness(.82) saturate(1)!important;
+}
+.final-grow-cta > div:nth-child(2){
+  background:linear-gradient(135deg,rgba(8,8,8,.22) 0%,rgba(8,8,8,.72) 100%),radial-gradient(ellipse 70% 60% at 42% 20%,rgba(201,168,76,.34),transparent 68%)!important;
+}
+.waitlist-form input,.waitlist-form textarea,.waitlist-form select,
+#apply-form input,#apply-form textarea,#apply-form select{
+  background:rgba(255,255,255,.045)!important;
+  padding-left:.15rem!important;
+}
+.waitlist-form button,.btn-gold{
+  box-shadow:0 10px 35px rgba(201,168,76,.10)!important;
+}
+@media(max-width:760px){
+  .photo-credit,.credit-tag,.image-credit{font-size:.44rem!important;max-width:84%!important;}
+  .tda-mantra span:nth-child(3){font-size:clamp(3rem,16vw,4.5rem)!important;}
+  .final-grow-cta{padding:5.2rem 5vw!important;}
+}
+
 </style>
 </head>
 <body>
@@ -3128,10 +3186,10 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <p class="flagship-tagline">Train. Create. Screen.</p>
 <p class="body-copy" style="max-width:480px;margin:0 0 1rem;">Production and post-production training for filmmakers interested in scripted and unscripted film and television. Professional cinema-grade equipment from day one. No experience required.</p>
 <div style="border-left:2px solid var(--gold);padding-left:1rem;margin-bottom:1.8rem;">
-<p style="font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.06em;font-family:'DM Sans',sans-serif;margin-bottom:.2rem;">Next intake — Shoot Your Short Intensive</p>
-<p style="font-size:.82rem;color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;">Saturday 9 &amp; Sunday 10 May</p>
+<p style="font-size:.75rem;color:var(--gold);font-weight:600;letter-spacing:.06em;font-family:'DM Sans',sans-serif;margin-bottom:.2rem;">Next cohort — join the waitlist</p>
+<p style="font-size:.82rem;color:rgba(255,255,255,0.55);font-family:'DM Sans',sans-serif;">Dates announced soon</p>
 </div>
-<a class="btn btn-gold" href="#" onclick="go('apply')">Join the Next Cohort</a>
+<a class="btn btn-gold" href="#" onclick="go('apply')">Join the Waitlist</a>
 </div>
 </div>
 </div>
@@ -3333,7 +3391,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 </div>
 </div>
 <!-- ── FINAL CTA STRIP ────────────────────────────────────────────────────── -->
-<div class="cinematic-surface" style="position:relative;overflow:hidden;padding:8rem 4vw;text-align:center;background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(8,8,8,.94) 78%);border-top:1px solid rgba(201,168,76,.24);border-bottom:1px solid rgba(201,168,76,.18);">
+<div class="cinematic-surface final-grow-cta" style="position:relative;overflow:hidden;padding:8rem 4vw;text-align:center;background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(8,8,8,.94) 78%);border-top:1px solid rgba(201,168,76,.24);border-bottom:1px solid rgba(201,168,76,.18);">
 <div style="position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg');background-size:cover;background-position:center top;opacity:.28;mix-blend-mode:screen;filter:brightness(.72) saturate(.95);"></div>
 <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,8,.18) 0%,rgba(8,8,8,.74) 100%),radial-gradient(ellipse 70% 60% at 42% 20%,rgba(201,168,76,.26),transparent 68%);"></div>
 <div style="position:relative;z-index:2;max-width:720px;margin:0 auto;">
@@ -3485,7 +3543,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <span class="project-flow-kicker">Flagship Development Project · Manchester</span>
 <h3 class="project-flow-title">Shoot Your Short</h3>
 <p class="project-flow-copy">A practical filmmaking project for emerging filmmakers and underrepresented creatives. Participants learn camera, lighting, sound, directing, editing and post-production by making real work together.</p>
-<p class="project-flow-copy" style="margin-top:-.8rem;">Next cohort: register interest now.</p>
+<p class="project-flow-copy" style="margin-top:-.8rem;">Future cohort: register interest now.</p>
 <a class="project-flow-cta" href="#" onclick="go('apply')">Join SYS Waitlist</a>
 <div class="project-flow-tags"><span>Training</span><span>Production</span><span>Showcase</span></div>
 </div>
@@ -4081,12 +4139,12 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <img alt="Shoot Your Short application" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533329/LAT00304-Enhanced-NR_czknxm.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;"/>
 <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,.97) 0%,rgba(8,8,8,.65) 55%,rgba(8,8,8,.1) 100%);"></div>
 <div style="position:relative;z-index:2;padding:0 5vw 4.5rem;max-width:620px;">
-<span style="font-size:.58rem;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.8rem;">Shoot Your Short — Application</span>
-<h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;line-height:1.02;color:#fff;margin-bottom:.8rem;">Apply for the<br/><em style="color:var(--gold);">next cohort.</em></h1>
-<p style="font-size:.92rem;color:rgba(255,255,255,.6);line-height:1.7;font-family:'DM Sans',sans-serif;font-weight:300;max-width:480px;margin-bottom:1.4rem;">Take the first step. We'll take it from there.</p>
+<span style="font-size:.58rem;font-weight:600;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.8rem;">Shoot Your Short — Waitlist</span>
+<h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;line-height:1.02;color:#fff;margin-bottom:.8rem;">Join the waitlist for<br/><em style="color:var(--gold);">the next cohort.</em></h1>
+<p style="font-size:.92rem;color:rgba(255,255,255,.6);line-height:1.7;font-family:'DM Sans',sans-serif;font-weight:300;max-width:480px;margin-bottom:1.4rem;">The May training has concluded. Join the waitlist and we’ll contact you when the next cohort opens.</p>
 <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
 <span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .9rem;border:1px solid rgba(201,168,76,.3);color:rgba(201,168,76,.75);font-family:'DM Sans',sans-serif;">No experience required</span>
-<span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .9rem;border:1px solid rgba(201,168,76,.3);color:rgba(201,168,76,.75);font-family:'DM Sans',sans-serif;">Saturdays only</span>
+<span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .9rem;border:1px solid rgba(201,168,76,.3);color:rgba(201,168,76,.75);font-family:'DM Sans',sans-serif;">Future cohorts</span>
 <span style="font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.3rem .9rem;border:1px solid rgba(201,168,76,.3);color:rgba(201,168,76,.75);font-family:'DM Sans',sans-serif;">Open to all</span>
 </div>
 </div>
@@ -4096,7 +4154,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <div style="background:rgba(201,168,76,.07);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin-bottom:3.5rem;">
 <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.7rem;">No experience? That is not a barrier here.</h3>
 <p style="font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.85;font-family:'DM Sans',sans-serif;font-weight:300;margin-bottom:.8rem;">Shoot Your Short is designed for people who have not had the opportunity — not those who already have access. We particularly welcome applications from <strong style="color:var(--gold);font-weight:500;">Black, Asian and other ethnically diverse backgrounds</strong>, migrants and internationally-trained creatives, people with caring responsibilities, those from low-income households, and anyone who has felt like the screen industries were not built for them.</p>
-<p style="font-size:.8rem;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;">This form takes around 10 minutes. There are no wrong answers. Be honest.</p>
+<p style="font-size:.8rem;color:rgba(255,255,255,.4);font-family:'DM Sans',sans-serif;">This waitlist form helps us understand your interests, background and the kind of support you may need. There are no wrong answers.</p>
 </div>
 <!-- Form -->
 <form data-netlify="true" id="apply-form" method="POST" name="apply" netlify-honeypot="bot-field">
@@ -4164,7 +4222,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 </div>
 <label style="display:flex;align-items:flex-start;gap:.8rem;cursor:pointer;">
 <input name="parent_consent" onblur="this.style.borderColor='rgba(255,255,255,.3)'" onfocus="this.style.borderColor='#C9A84C'" style="appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1.5px solid rgba(255,255,255,.3);border-radius:2px;cursor:pointer;flex-shrink:0;margin-top:2px;position:relative;transition:border-color .2s,background .2s;" type="checkbox"/>
-<span style="font-size:.82rem;color:rgba(255,255,255,.6);font-family:'DM Sans',sans-serif;line-height:1.6;">I confirm that my parent or guardian is aware of this application and gives permission for me to attend the Shoot Your Short Intensive on Saturday 9 &amp; Sunday 10 May.</span>
+<span style="font-size:.82rem;color:rgba(255,255,255,.6);font-family:'DM Sans',sans-serif;line-height:1.6;">I confirm that my parent or guardian is aware of this waitlist submission and gives permission for Made In Black Studios CIC to contact me about future youth opportunities.</span>
 </label>
 </div>
 </div>
@@ -4273,14 +4331,14 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
 <div>
-<label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Are you available for both days? *</label>
-<span style="font-size:.72rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Saturday 9 May &amp; Sunday 10 May — 10am to 5pm</span>
+<label style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.65);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.4rem;">Preferred availability for future cohorts *</label>
+<span style="font-size:.72rem;color:rgba(255,255,255,.35);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.6rem;">Tell us what usually works for you. Final dates will be announced later.</span>
 <select name="availability" required="" style="width:100%;background:rgba(255,255,255,.06);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;">
 <option disabled="" selected="" style="background:#141414;" value="">Select one</option>
-<option style="background:#141414;">Yes — I am available both days</option>
-<option style="background:#141414;">Saturday 9 May only</option>
-<option style="background:#141414;">Sunday 10 May only</option>
-<option style="background:#141414;">I have a conflict but want to discuss</option>
+<option style="background:#141414;">Weekends usually work for me</option>
+<option style="background:#141414;">Saturdays usually work best</option>
+<option style="background:#141414;">Sundays usually work best</option>
+<option style="background:#141414;">I am flexible / please keep me updated</option>
 </select>
 </div>
 <div>
@@ -4303,8 +4361,8 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <textarea name="anything_else" placeholder="Caring responsibilities, accessibility needs, or anything that might affect your participation." style="width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1.5px solid rgba(255,255,255,.2);color:#fff;padding:.85rem 0;font-family:'DM Sans',sans-serif;font-size:.88rem;outline:none;height:90px;resize:vertical;line-height:1.65;"></textarea>
 </div>
 </div>
-<p style="font-size:.7rem;color:rgba(255,255,255,.22);line-height:1.85;margin-bottom:2rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.07);">Your information is held securely and used only for project selection. We will never sell or share your data with third parties. By submitting you agree to Made In Black Studios CIC contacting you about your application and future project opportunities.</p>
-<button class="btn btn-gold" style="width:100%;cursor:pointer;padding:1.2rem;font-size:.75rem;letter-spacing:.16em;" type="submit">Submit My Application →</button>
+<p style="font-size:.7rem;color:rgba(255,255,255,.22);line-height:1.85;margin-bottom:2rem;padding:1.2rem 1.5rem;border:1px solid rgba(255,255,255,.07);">Your information is held securely and used only to manage our waitlist, understand community need and contact you about future Made In Black Studios CIC project opportunities. We will never sell or share your data with third parties.</p>
+<button class="btn btn-gold" style="width:100%;cursor:pointer;padding:1.2rem;font-size:.75rem;letter-spacing:.16em;" type="submit">Join the Waitlist →</button>
 </form>
 </section>
 </div><!-- /apply -->

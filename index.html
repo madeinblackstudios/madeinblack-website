@@ -2923,6 +2923,117 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
   .final-grow-cta{padding:5.2rem 5vw!important;}
 }
 
+
+
+/* =========================
+   PROJECT DETAIL PAGES — V17
+   ========================= */
+.project-flow-card{cursor:pointer;}
+.project-flow-card:focus-within{outline:1px solid rgba(201,168,76,.55);outline-offset:-1px;}
+.project-detail-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--gold-dim);}
+.project-detail-hero__bg{position:absolute;inset:0;background:#0b0b0b;}
+.project-detail-hero__bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.9) contrast(1.05);transform:scale(1.02);}
+.project-detail-hero__over{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,rgba(8,8,8,.72) 34%,rgba(8,8,8,.18) 100%),linear-gradient(to right,rgba(8,8,8,.82) 0%,rgba(8,8,8,.32) 54%,rgba(8,8,8,.08) 100%);}
+.project-detail-hero__content{position:relative;z-index:2;padding:0 5vw 5rem;max-width:1040px;}
+.project-detail-eyebrow{font-size:.58rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;display:block;margin-bottom:1rem;}
+.project-detail-title{font-size:clamp(3rem,7vw,7rem);line-height:.92;font-weight:900;letter-spacing:-.03em;margin-bottom:1.4rem;}
+.project-detail-title em{color:var(--gold);font-style:italic;}
+.project-detail-sub{font-size:clamp(.95rem,1.5vw,1.15rem);line-height:1.85;color:rgba(255,255,255,.72);max-width:720px;font-weight:300;}
+.project-detail-nav{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:2rem;}
+.project-detail-section{padding:5.5rem 5vw;position:relative;overflow:hidden;border-bottom:1px solid rgba(201,168,76,.12);}
+.project-detail-section.texture::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 0% 15%,rgba(201,168,76,.08),transparent 42%),radial-gradient(ellipse at 100% 80%,rgba(255,255,255,.035),transparent 45%);}
+.project-detail-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto;}
+.detail-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center;}
+.detail-kicker{font-size:.58rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;display:block;margin-bottom:.85rem;}
+.detail-copy{font-size:.95rem;line-height:1.9;color:rgba(255,255,255,.68);font-weight:300;max-width:720px;}
+.detail-copy strong{color:var(--gold);font-weight:500;}
+.detail-image{position:relative;min-height:420px;border:1px solid rgba(201,168,76,.22);overflow:hidden;background:#121212;box-shadow:0 30px 90px rgba(0,0,0,.35);}
+.detail-image img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) saturate(.92);transition:transform 1s var(--ease-cinema, cubic-bezier(.22,1,.36,1));}
+.detail-image:hover img{transform:scale(1.035);}
+.detail-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.16);margin-top:3rem;}
+.detail-metric{background:rgba(12,12,12,.88);padding:2rem 1.4rem;text-align:center;}
+.detail-metric b{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);line-height:1;display:block;margin-bottom:.5rem;}
+.detail-metric span{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);font-family:'DM Sans',sans-serif;}
+.detail-gallery{display:grid;grid-template-columns:1.2fr .8fr .9fr;grid-auto-rows:220px;gap:1px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.16);margin-top:3rem;}
+.detail-gallery figure{position:relative;overflow:hidden;background:#111;}
+.detail-gallery figure:nth-child(1){grid-row:span 2;}
+.detail-gallery figure:nth-child(4){grid-column:span 2;}
+.detail-gallery img{width:100%;height:100%;object-fit:cover;filter:brightness(.76) saturate(.9);transition:transform 1s ease,filter .4s ease;}
+.detail-gallery figure:hover img{transform:scale(1.045);filter:brightness(.9) saturate(1);}
+.reel-evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.16);margin-top:2.5rem;}
+.reel-card{min-height:260px;background:linear-gradient(160deg,rgba(201,168,76,.08),rgba(255,255,255,.025));padding:2rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
+.reel-card::after{content:'REEL';position:absolute;right:1rem;top:1rem;font-size:.55rem;letter-spacing:.2em;color:rgba(201,168,76,.48);font-weight:700;}
+.reel-card h3{font-size:1.2rem;line-height:1.2;margin-bottom:.8rem;}
+.reel-card p{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.56);}
+.reel-placeholder{border:1px dashed rgba(201,168,76,.34);display:flex;align-items:center;justify-content:center;text-align:center;min-height:180px;color:rgba(255,255,255,.46);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif;padding:1.2rem;}
+.project-next-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.4rem;}
+.detail-quote{font-family:'Playfair Display',serif;font-size:clamp(1.45rem,2.3vw,2.25rem);line-height:1.35;font-style:italic;color:rgba(255,255,255,.88);max-width:900px;}
+.detail-quote em{color:var(--gold);}
+@media(max-width:900px){.project-detail-hero{min-height:460px}.detail-split{grid-template-columns:1fr;gap:2.5rem}.detail-image{min-height:320px}.detail-metrics{grid-template-columns:1fr 1fr}.detail-gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.detail-gallery figure:nth-child(1),.detail-gallery figure:nth-child(4){grid-row:auto;grid-column:auto}.reel-evidence-grid{grid-template-columns:1fr}.project-detail-section{padding:4rem 5vw}}
+@media(max-width:560px){.project-detail-title{font-size:3.2rem}.project-detail-hero__content{padding-bottom:3.5rem}.detail-metrics{grid-template-columns:1fr}.detail-gallery{grid-template-columns:1fr;grid-auto-rows:210px}.project-detail-nav .btn{width:100%;text-align:center}.project-next-row .btn{width:100%;text-align:center}}
+
+
+/* ── SYS evidence page additions ── */
+.sys-evidence-hero .project-detail-hero__bg img{filter:brightness(.68) saturate(.95) contrast(1.05);}
+.sys-origin-grid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:1px;background:rgba(201,168,76,.16);border:1px solid rgba(201,168,76,.16);}
+.sys-origin-grid figure{position:relative;min-height:430px;overflow:hidden;background:#111;}
+.sys-origin-grid figure img{width:100%;height:100%;object-fit:cover;filter:brightness(.78);transition:transform .7s ease,filter .4s ease;}
+.sys-origin-grid figure:hover img{transform:scale(1.04);filter:brightness(.9);}
+.sys-origin-copy{background:linear-gradient(155deg,rgba(201,168,76,.09),rgba(255,255,255,.03));padding:3rem;display:flex;flex-direction:column;justify-content:center;}
+.sys-timeline{display:grid;gap:1px;background:rgba(201,168,76,.16);border:1px solid rgba(201,168,76,.16);}
+.sys-time-item{background:rgba(8,8,8,.72);padding:2rem;position:relative;overflow:hidden;}
+.sys-time-item span{font-size:.58rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;}
+.sys-time-item h3{font-size:1.35rem;margin:.65rem 0 .5rem;}
+.sys-time-item p{font-size:.86rem;line-height:1.75;color:rgba(255,255,255,.62);font-family:'DM Sans',sans-serif;font-weight:300;}
+.sys-gallery-strong{grid-auto-rows:240px;}
+.sys-gallery-strong figure:nth-child(1){grid-row:span 2;}
+.sys-gallery-strong figure:nth-child(4){grid-column:span 2;}
+.reel-evidence-grid-four{grid-template-columns:repeat(4,1fr);}
+.reel-embed-card{padding:1.2rem;gap:1.2rem;min-height:auto;}
+.reel-embed-card iframe{width:100%;height:430px;border:0;background:#050505;border:1px solid rgba(201,168,76,.18);}
+.reel-embed-card::after{content:'COMMUNITY MADE';}
+.reverse-split{direction:rtl;}.reverse-split>*{direction:ltr;}
+@media(max-width:1100px){.reel-evidence-grid-four{grid-template-columns:repeat(2,1fr);}.sys-origin-grid{grid-template-columns:1fr 1fr}.sys-origin-copy{grid-column:1 / -1;grid-row:1}.sys-origin-grid figure{min-height:340px;}}
+@media(max-width:700px){.reel-evidence-grid-four{grid-template-columns:1fr}.reel-embed-card iframe{height:520px}.sys-origin-grid{grid-template-columns:1fr}.sys-origin-copy{padding:2rem}.sys-gallery-strong figure:nth-child(1),.sys-gallery-strong figure:nth-child(4){grid-row:auto;grid-column:auto}.reverse-split{direction:ltr;}}
+
+
+/* ── SYS evidence/story refinement v19 ── */
+.sys-origin-premium{background:linear-gradient(135deg,rgba(201,168,76,.055),rgba(8,8,8,1) 48%,rgba(255,255,255,.025));}
+.sys-origin-head{max-width:780px;margin-bottom:1.5rem;}
+.sys-origin-premium-grid{display:grid;grid-template-columns:1.15fr .9fr .75fr;gap:1px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.18);}
+.sys-origin-premium-grid figure{position:relative;min-height:470px;overflow:hidden;background:#111;}
+.sys-origin-premium-grid figure img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) contrast(1.04);transition:transform .8s ease,filter .4s ease;}
+.sys-origin-premium-grid figure:hover img{transform:scale(1.04);filter:brightness(.9) contrast(1.05);}
+.sys-origin-story-card{background:rgba(8,8,8,.94);padding:2.4rem;display:flex;flex-direction:column;justify-content:center;}
+.sys-origin-story-card .archive-label{font-size:.56rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;margin-bottom:1rem;}
+.sys-origin-story-card h3{font-size:1.45rem;line-height:1.15;margin-bottom:1rem;color:#fff;}
+.sys-origin-story-card p{font-size:.86rem;line-height:1.85;color:rgba(255,255,255,.63);margin-bottom:1rem;}
+.archive-links{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.8rem;}
+.sys-timeline-premium .sys-time-item{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));}
+.sys-photo-story{background:linear-gradient(180deg,rgba(8,8,8,1),rgba(20,20,20,.92));}
+.sys-gallery-expanded{grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;}
+.sys-gallery-expanded figure:nth-child(1){grid-column:span 2;grid-row:span 2;}
+.sys-gallery-expanded figure:nth-child(4){grid-column:span 2;}
+.sys-gallery-expanded figure:nth-child(7){grid-column:span 2;}
+.sys-reels-layout{grid-template-columns:.8fr 1.2fr;align-items:start;}
+.archive-mini-card{border:1px solid rgba(201,168,76,.22);background:rgba(201,168,76,.055);padding:1.35rem;max-width:420px;}
+.archive-mini-card span{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+.archive-mini-card h3{font-size:1rem;margin:.45rem 0;color:#fff;}
+.archive-mini-card p{font-size:.78rem;line-height:1.7;color:rgba(255,255,255,.55);}
+.archive-mini-card a{display:inline-block;margin-top:.9rem;color:var(--gold);font-size:.72rem;font-weight:600;text-decoration:none;letter-spacing:.08em;text-transform:uppercase;}
+.community-reel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.18);}
+.community-reel-card{min-height:210px;padding:1.6rem;background:linear-gradient(135deg,rgba(20,20,20,.98),rgba(8,8,8,.96));text-decoration:none;color:#fff;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:transform .25s ease,background .25s ease;}
+.community-reel-card::before{content:'';position:absolute;inset:auto -20% -35% auto;width:160px;height:160px;border-radius:50%;background:rgba(201,168,76,.11);filter:blur(20px);transition:transform .35s ease,opacity .35s ease;}
+.community-reel-card::after{content:'▶';position:absolute;right:1.2rem;top:1.1rem;width:34px;height:34px;border:1px solid rgba(201,168,76,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.7rem;background:rgba(8,8,8,.5);}
+.community-reel-card:hover{background:linear-gradient(135deg,rgba(201,168,76,.09),rgba(8,8,8,.98));transform:translateY(-2px);}
+.community-reel-card:hover::before{transform:scale(1.2);opacity:.9;}
+.community-reel-card span{font-size:.52rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'DM Sans',sans-serif;}
+.community-reel-card h3{font-size:1.08rem;line-height:1.2;margin-top:1.8rem;position:relative;z-index:1;}
+.community-reel-card p{font-size:.78rem;line-height:1.65;color:rgba(255,255,255,.58);margin-top:.55rem;position:relative;z-index:1;}
+.community-reel-card b{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;margin-top:1.2rem;position:relative;z-index:1;}
+@media(max-width:1050px){.sys-origin-premium-grid{grid-template-columns:1fr 1fr}.sys-origin-story-card{grid-column:1/-1;grid-row:1}.sys-origin-premium-grid figure{min-height:340px}.sys-gallery-expanded{grid-template-columns:repeat(2,1fr)}.sys-gallery-expanded figure:nth-child(n){grid-column:auto;grid-row:auto}.sys-gallery-expanded figure:nth-child(1){grid-column:span 2}.sys-reels-layout{grid-template-columns:1fr;}.community-reel-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.sys-origin-premium-grid,.community-reel-grid{grid-template-columns:1fr}.sys-origin-story-card{padding:2rem}.sys-gallery-expanded{grid-template-columns:1fr;grid-auto-rows:230px}.sys-gallery-expanded figure:nth-child(1){grid-column:auto}.community-reel-card{min-height:190px}.archive-links .btn{width:100%;text-align:center}}
+
 </style>
 </head>
 <body>
@@ -3517,7 +3628,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
         </div>
 </div>
 <div class="project-flow-grid fade-in">
-<article class="project-flow-card">
+<article class="project-flow-card" onclick="go('project-exposure')" role="button" tabindex="0">
 <span class="project-flow-number">01</span>
 <div class="project-flow-img">
 <img alt="Exposure Walk Shoot Belong" class="lightbox-img" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg"/>
@@ -3528,11 +3639,11 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <h3 class="project-flow-title">Exposure</h3>
 <p class="project-flow-copy">A low-pressure creative project where migrant creatives and new entrants meet, walk, photograph, film, share food and build a sense of belonging in the city.</p>
 <p class="project-flow-copy" style="margin-top:-.8rem;">No specialist equipment required. A phone is enough.</p>
-<a class="project-flow-cta" href="#" onclick="go('apply')">Join Exposure List</a>
+<a class="project-flow-cta" href="#" onclick="event.stopPropagation();go('project-exposure')">View Exposure</a>
 <div class="project-flow-tags"><span>Belonging</span><span>Photography</span><span>Peer Support</span></div>
 </div>
 </article>
-<article class="project-flow-card flagship">
+<article class="project-flow-card flagship" onclick="go('project-sys')" role="button" tabindex="0">
 <span class="flagship-ribbon">Flagship Project</span>
 <span class="project-flow-number">02</span>
 <div class="project-flow-img">
@@ -3544,11 +3655,11 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <h3 class="project-flow-title">Shoot Your Short</h3>
 <p class="project-flow-copy">A practical filmmaking project for emerging filmmakers and underrepresented creatives. Participants learn camera, lighting, sound, directing, editing and post-production by making real work together.</p>
 <p class="project-flow-copy" style="margin-top:-.8rem;">Future cohort: register interest now.</p>
-<a class="project-flow-cta" href="#" onclick="go('apply')">Join SYS Waitlist</a>
+<a class="project-flow-cta" href="#" onclick="event.stopPropagation();go('project-sys')">View SYS</a>
 <div class="project-flow-tags"><span>Training</span><span>Production</span><span>Showcase</span></div>
 </div>
 </article>
-<article class="project-flow-card">
+<article class="project-flow-card" onclick="go('project-postroom')" role="button" tabindex="0">
 <span class="project-flow-number">03</span>
 <div class="project-flow-img">
 <img alt="The Post Room creative development" class="lightbox-img" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300631/26_ecr0ys.jpg"/>
@@ -3558,11 +3669,11 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <span class="project-flow-kicker">Monthly Peer Development</span>
 <h3 class="project-flow-title">The Post Room</h3>
 <p class="project-flow-copy">A creative room for community members to bring scripts, story ideas, footage, rough cuts and questions. A space where raw material becomes stronger through honest conversation.</p>
-<a class="project-flow-cta" href="#" onclick="go('apply')">Register Interest</a>
+<a class="project-flow-cta" href="#" onclick="event.stopPropagation();go('project-postroom')">View Post Room</a>
 <div class="project-flow-tags"><span>Scripts</span><span>Story</span><span>Feedback</span></div>
 </div>
 </article>
-<article class="project-flow-card">
+<article class="project-flow-card" onclick="go('project-screenshorts')" role="button" tabindex="0">
 <span class="project-flow-number">04</span>
 <div class="project-flow-img">
 <img alt="Screenshorts cinema room and community screening" class="lightbox-img" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&amp;q=80&amp;fit=crop"/>
@@ -3572,7 +3683,7 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <span class="project-flow-kicker">Screening &amp; Feedback Hub</span>
 <h3 class="project-flow-title">Screenshorts</h3>
 <p class="project-flow-copy">A screening space for Black-made short films, work-in-progress previews, audience feedback and cultural gathering before wider festival journeys.</p>
-<a class="project-flow-cta" href="#" onclick="go('screenings')">Screen With Us</a>
+<a class="project-flow-cta" href="#" onclick="event.stopPropagation();go('project-screenshorts')">View Screenshorts</a>
 <div class="project-flow-tags"><span>Exhibition</span><span>Audience</span><span>Black Cinema</span></div>
 </div>
 </article>
@@ -3613,6 +3724,169 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
      SCREENINGS & FILM LABS PAGE
      ========================= -->
 <!-- ═══════════════════ SCREENINGS ═══════════════════ -->
+
+
+<!-- =========================
+     PROJECT DETAIL: EXPOSURE
+     ========================= -->
+<div class="page" id="page-project-exposure">
+  <div class="project-detail-hero">
+    <div class="project-detail-hero__bg"><img alt="Exposure Walk Shoot Belong" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg"></div>
+    <div class="project-detail-hero__over"></div>
+    <div class="project-detail-hero__content">
+      <span class="project-detail-eyebrow">Exposure · Entry Point</span>
+      <h1 class="project-detail-title">Walk. Shoot.<br><em>Belong.</em></h1>
+      <p class="project-detail-sub">A low-pressure creative wellbeing project where migrant creatives and new entrants meet, walk, photograph, film, share food and build belonging through creative observation.</p>
+      <div class="project-detail-nav"><a class="btn btn-gold" href="#" onclick="go('apply')">Join the Waitlist</a><a class="btn btn-wire" href="#" onclick="go('projects')">Back to Projects</a></div>
+    </div>
+  </div>
+  <section class="project-detail-section texture">
+    <div class="project-detail-inner detail-split">
+      <div><span class="detail-kicker">What it does</span><h2 class="sh">From isolation into<br><em>creative community.</em></h2><p class="detail-copy mt2">Exposure is the softest point of entry into Made In Black Studios. There is no pressure to be advanced, no pressure to have equipment, and no requirement to produce finished work. Participants simply show up, move through the city together, photograph or film what they notice, share food and build trust.</p><p class="detail-copy mt1">It supports wellbeing, confidence and social connection for migrant creatives who are rebuilding their lives and creative identity in the UK.</p></div>
+      <figure class="detail-image"><img class="lightbox-img" alt="Exposure participant moment" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777802801/Screenshot_2026-05-03_110247_dc6cif.png"><figcaption class="photo-credit">Made In Black Studios · Exposure</figcaption></figure>
+    </div>
+    <div class="project-detail-inner detail-metrics"><div class="detail-metric"><b>Low</b><span>barrier entry</span></div><div class="detail-metric"><b>Phone</b><span>camera welcome</span></div><div class="detail-metric"><b>Food</b><span>shared together</span></div><div class="detail-metric"><b>Belonging</b><span>first outcome</span></div></div>
+  </section>
+  <section class="project-detail-section"><div class="project-detail-inner"><span class="detail-kicker">Gallery</span><h2 class="sh">Images from<br><em>Exposure.</em></h2><div class="detail-gallery"><figure><img class="lightbox-img" alt="Exposure walk and shoot" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777801456/acef105a-ae5c-4a9b-aaae-5cf6976b3822_kq4z6r.jpg"><figcaption class="photo-credit">Made In Black Studios · Exposure</figcaption></figure><figure><img class="lightbox-img" alt="Exposure city observation" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533321/IMG_5103_inbsic.jpg"><figcaption class="photo-credit">Made In Black Studios · Exposure</figcaption></figure><figure><img class="lightbox-img" alt="Exposure community walk" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777802801/Screenshot_2026-05-03_110607_dyoukg.png"><figcaption class="photo-credit">Made In Black Studios · Exposure</figcaption></figure><figure><img class="lightbox-img" alt="Exposure outdoor creative moment" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533743/IMG_5134_kuxarw.jpg"><figcaption class="photo-credit">Community image</figcaption></figure></div><div class="project-next-row"><a class="btn btn-gold" href="#" onclick="go('project-sys')">Next: Shoot Your Short</a><a class="btn btn-wire" href="#" onclick="go('apply')">Register Interest</a></div></div></section>
+</div>
+
+<!-- =========================
+     PROJECT DETAIL: SHOOT YOUR SHORT
+     ========================= -->
+<div class="page" id="page-project-sys">
+  <div class="project-detail-hero sys-evidence-hero">
+    <div class="project-detail-hero__bg"><img alt="Shoot Your Short training" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779301936/5_gtrvlt.jpg" style="object-position:center 35%;"></div>
+    <div class="project-detail-hero__over"></div>
+    <div class="project-detail-hero__content">
+      <span class="project-detail-eyebrow">Flagship Project · From Lagos to Manchester</span>
+      <h1 class="project-detail-title">Shoot Your<br><em>Short.</em></h1>
+      <p class="project-detail-sub">A hands-on filmmaker development project helping migrant and underrepresented creatives gain skills, make work, earn credits, build confidence and find a trusted creative community.</p>
+      <div class="project-detail-nav"><a class="btn btn-gold" href="#apply" onclick="go('apply')">Join SYS Waitlist</a><a class="btn btn-wire" href="#projects" onclick="go('projects')">Back to Projects</a></div>
+    </div>
+  </div>
+
+  <section class="project-detail-section texture sys-intro-section">
+    <div class="project-detail-inner detail-split">
+      <div>
+        <span class="detail-kicker">The flagship pathway</span>
+        <h2 class="sh">You need credits<br><em>to get credits.</em></h2>
+        <p class="detail-copy mt2">Shoot Your Short breaks the loop. Participants move through practical training, collaborative shoots, post-production, feedback and public screening. It is not a lecture room. It is a production environment where people learn by making.</p>
+        <p class="detail-copy mt1">The project supports confidence, wellbeing and creative identity while building real craft: cinematography, directing, sound, editing, storytelling and working as a crew.</p>
+      </div>
+      <figure class="detail-image"><img class="lightbox-img" alt="Shoot Your Short hands-on camera training" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779301958/33_z01fqp.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+    </div>
+    <div class="project-detail-inner detail-metrics"><div class="detail-metric"><b>Since</b><span>2020</span></div><div class="detail-metric"><b>2</b><span>cohorts proposed</span></div><div class="detail-metric"><b>Public</b><span>screenings</span></div><div class="detail-metric"><b>Credits</b><span>participants can use</span></div></div>
+  </section>
+
+  <section class="project-detail-section sys-story-section sys-origin-premium">
+    <div class="project-detail-inner">
+      <div class="sys-origin-head">
+        <span class="detail-kicker">Where it started</span>
+        <h2 class="sh">Lagos, 2020:<br><em>the first room.</em></h2>
+        <p class="detail-copy">Shoot Your Short began before Made In Black Studios was registered. It started as a practical response to a simple problem: talented people needed access, confidence, equipment and a room where they could learn by making.</p>
+      </div>
+      <div class="sys-origin-premium-grid mt3">
+        <figure class="sys-origin-hero-card"><img class="lightbox-img" alt="Shoot Your Short Lagos training in 2020" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533099/DSC_0439_etufdt.jpg"><figcaption class="photo-credit">Shoot Your Short · Lagos archive</figcaption></figure>
+        <div class="sys-origin-story-card">
+          <span class="archive-label">Archive · 2020</span>
+          <h3>Ongoing work, now being scaled.</h3>
+          <p>In Lagos, emerging filmmakers gathered for free practical training: camera, lighting, story, collaboration and the confidence to call themselves filmmakers. Some people connected through the wider Shoot Your Short journey have since built serious creative practice and gone on to make award-recognised work.</p>
+          <p>This page is not about nostalgia. It shows a methodology developed over time and now being formalised in the UK through Made In Black Studios CIC.</p>
+          <div class="archive-links">
+            <a class="btn btn-wire-gold" href="https://thenationonlineng.net/tsaint-announces-free-training-for-filmmakers/" target="_blank" rel="noopener">Read 2020 press clipping</a>
+            <a class="btn btn-wire" href="https://www.instagram.com/p/B7buvMLgM2h/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">View archive post</a>
+          </div>
+        </div>
+        <figure class="sys-origin-side-card"><img class="lightbox-img" alt="Shoot Your Short Lagos participants learning on set" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777533098/DSC_0552_sfi8m7.jpg"><figcaption class="photo-credit">Shoot Your Short · Lagos archive</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-section texture">
+    <div class="project-detail-inner detail-split reverse-split">
+      <div>
+        <span class="detail-kicker">The journey</span>
+        <h2 class="sh">From Lagos<br><em>to Bradford to Manchester.</em></h2>
+        <p class="detail-copy mt2">After Lagos, the work continued in the UK through training and community activity, including Bradford with The Unit, before Made In Black Studios became fully registered in Manchester as a CIC.</p>
+        <p class="detail-copy mt1">That journey matters because this is not a new idea being invented for a grant. It is a tested approach being shaped into a sustainable creative pathway for migrant and underrepresented filmmakers rebuilding confidence, careers and community in the UK.</p>
+      </div>
+      <div class="sys-timeline sys-timeline-premium">
+        <div class="sys-time-item"><span>2020</span><h3>Lagos</h3><p>Hands-on filmmaking workshops give emerging creatives access to tools, training and confidence.</p></div>
+        <div class="sys-time-item"><span>UK</span><h3>Bradford</h3><p>Training continues with The Unit, carrying the approach into new communities and contexts.</p></div>
+        <div class="sys-time-item"><span>2026</span><h3>Manchester</h3><p>Made In Black Studios CIC is registered and Shoot Your Short becomes the flagship pathway for the organisation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-section sys-photo-story">
+    <div class="project-detail-inner">
+      <span class="detail-kicker">Manchester community pilot</span>
+      <h2 class="sh">The training has<br><em>already begun.</em></h2>
+      <p class="detail-copy mt2">In 2026, Made In Black Studios delivered a two-day Shoot Your Short pilot in Manchester with participants learning camera, lighting, interview craft, sound and documentary production. A peer-to-peer documentary was produced during the training and is now being edited by the community.</p>
+      <div class="detail-gallery sys-gallery-strong sys-gallery-expanded mt3">
+        <figure><img class="lightbox-img" alt="SYS workshop camera training" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300588/24_ksccvo.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS participant filming" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779303060/10_hx1ssp.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS workshop" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779303061/21_xnwrrn.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS behind the scenes" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1777531225/IMG_5128_kgs564.jpg"><figcaption class="photo-credit">Made In Black Studios · Community documentation</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS group and crew activity" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779301998/18_zmumqt.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS production workshop moment" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300631/26_ecr0ys.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS participants on set" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779301958/33_z01fqp.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS production moment" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300587/51_xrvsxl.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+        <figure><img class="lightbox-img" alt="SYS collaborative learning" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300587/8_p6duzd.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail-section texture sys-reels-section">
+    <div class="project-detail-inner detail-split sys-reels-layout">
+      <div>
+        <span class="detail-kicker">Made by the community</span>
+        <h2 class="sh">Reels from<br><em>inside the room.</em></h2>
+        <p class="detail-copy mt2">These reels were made by participants and community members during the Shoot Your Short training. They are not polished promotional films from Made In Black Studios. That is the point: they show the atmosphere of the room, the learning in progress and the way participants documented the experience in their own voice.</p>
+        <div class="archive-mini-card mt2">
+          <span>Archive</span>
+          <h3>Where it began</h3>
+          <p>The original Shoot Your Short Instagram archive remains part of the project story — a thread from Lagos to the UK.</p>
+          <a href="https://www.instagram.com/p/B7buvMLgM2h/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener">View archive post →</a>
+        </div>
+      </div>
+      <div class="community-reel-grid">
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYITO3UCK2h/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>Training room energy</h3><p>Community-made footage from the SYS pilot.</p><b>Watch →</b></a>
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYUvl37oMkY/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>Hands-on learning</h3><p>Participants documenting the process in their own voice.</p><b>Watch →</b></a>
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYMgdgRot4y/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>Behind the scenes</h3><p>Raw workshop moments from the community.</p><b>Watch →</b></a>
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYIyAToIBKS/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>Learning by making</h3><p>A candid view of the training atmosphere.</p><b>Watch →</b></a>
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYUkvXMoqy_/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>Community lens</h3><p>Another participant-made look at the day.</p><b>Watch →</b></a>
+        <a class="community-reel-card" href="https://www.instagram.com/reel/DYaVywzo5oi/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener"><span>Instagram Reel</span><h3>What it felt like</h3><p>Organic moments from the workshop community.</p><b>Watch →</b></a>
+      </div>
+    </div>
+    <div class="project-detail-inner project-next-row"><a class="btn btn-gold" href="#apply" onclick="go('apply')">Join the Waitlist</a><a class="btn btn-wire" href="#project-postroom" onclick="go('project-postroom')">Next: The Post Room</a></div>
+  </section>
+</div>
+
+<!-- =========================
+     PROJECT DETAIL: THE POST ROOM
+     ========================= -->
+<div class="page" id="page-project-postroom">
+  <div class="project-detail-hero">
+    <div class="project-detail-hero__bg"><img alt="The Post Room creative development" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300631/26_ecr0ys.jpg"></div>
+    <div class="project-detail-hero__over"></div>
+    <div class="project-detail-hero__content"><span class="project-detail-eyebrow">Monthly Peer Development</span><h1 class="project-detail-title">The Post<br><em>Room.</em></h1><p class="project-detail-sub">A monthly creative development space for scripts, stories, footage, rough cuts and honest feedback. The room where ideas become stronger before they meet an audience.</p><div class="project-detail-nav"><a class="btn btn-gold" href="#" onclick="go('apply')">Register Interest</a><a class="btn btn-wire" href="#" onclick="go('projects')">Back to Projects</a></div></div>
+  </div>
+  <section class="project-detail-section texture"><div class="project-detail-inner detail-split"><div><span class="detail-kicker">Why it exists</span><h2 class="sh">Creative momentum<br><em>needs a room.</em></h2><p class="detail-copy mt2">The Post Room keeps the community active between training, shoots and screenings. Members bring scripts, story ideas, edits, problems and questions. The format is informal but serious: peer critique, rough-cut review, story support and practical advice from people who understand the work.</p><p class="detail-copy mt1">It is how Made In Black turns occasional activity into a sustained creative home.</p></div><figure class="detail-image"><img class="lightbox-img" alt="Creative feedback and development" src="https://res.cloudinary.com/dv05nd0ji/image/upload/v1779300633/7_nk208l.jpg"><figcaption class="photo-credit">Photography · Zainab Asafa @zainnies_visuals</figcaption></figure></div><div class="project-detail-inner detail-metrics"><div class="detail-metric"><b>Scripts</b><span>developed</span></div><div class="detail-metric"><b>Stories</b><span>refined</span></div><div class="detail-metric"><b>Rough cuts</b><span>reviewed</span></div><div class="detail-metric"><b>Peer</b><span>support</span></div></div><div class="project-next-row project-detail-inner"><a class="btn btn-gold" href="#" onclick="go('project-screenshorts')">Next: Screenshorts</a><a class="btn btn-wire" href="#" onclick="go('apply')">Join the List</a></div></section>
+</div>
+
+<!-- =========================
+     PROJECT DETAIL: SCREENSHORTS
+     ========================= -->
+<div class="page" id="page-project-screenshorts">
+  <div class="project-detail-hero">
+    <div class="project-detail-hero__bg"><img alt="Screenshorts cinema room" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1800&q=85&fit=crop"></div>
+    <div class="project-detail-hero__over"></div>
+    <div class="project-detail-hero__content"><span class="project-detail-eyebrow">Screening & Feedback Hub</span><h1 class="project-detail-title">Screen<br><em>Shorts.</em></h1><p class="project-detail-sub">A space for Black-made short films, work-in-progress previews, audience feedback and cultural gathering before wider festival journeys.</p><div class="project-detail-nav"><a class="btn btn-gold" href="#" onclick="go('apply')">Screen With Us</a><a class="btn btn-wire" href="#" onclick="go('projects')">Back to Projects</a></div></div>
+  </div>
+  <section class="project-detail-section texture"><div class="project-detail-inner detail-split"><div><span class="detail-kicker">Public visibility</span><h2 class="sh">Films need<br><em>a room.</em></h2><p class="detail-copy mt2">Screenshorts gives emerging filmmakers a place to test work, premiere films, hear from audiences and feel the cultural importance of seeing their stories held properly. It is not just a screening. It is feedback, gathering, industry visibility and community celebration.</p><p class="detail-copy mt1">For Shoot Your Short participants, Screenshorts becomes the public payoff: their work is seen, discussed and positioned for festival submission.</p></div><figure class="detail-image"><img class="lightbox-img" alt="Cinema screening room" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&fit=crop"><figcaption class="photo-credit">Cinema room · screening reference</figcaption></figure></div><div class="project-next-row project-detail-inner"><a class="btn btn-gold" href="#" onclick="go('apply')">Register a Film</a><a class="btn btn-wire" href="#" onclick="go('projects')">View All Projects</a></div></section>
+</div>
+
 <div class="page" id="page-screenings">
 <div class="cinematic-surface" style="position:relative;min-height:500px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5rem;">
 <img alt="Cinema" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&amp;q=80&amp;fit=crop" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"/>
@@ -4375,10 +4649,16 @@ figure:hover .photo-credit,.activity-card:hover .credit-tag,.project-flow-card:h
 <div class="image-lightbox__caption"></div>
 </div>
 <script>
-function go(id){
+function go(id, skipHash){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   const t=document.getElementById('page-'+id);
-  if(t){t.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  if(t){
+    t.classList.add('active');
+    if(!skipHash && window.location.hash !== '#' + id){
+      history.pushState(null, '', '#' + id);
+    }
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
   document.getElementById('navLinks').removeAttribute('style');
   // Update active nav link
   document.querySelectorAll('.nav-links a').forEach(a=>{
@@ -4386,6 +4666,13 @@ function go(id){
     const fn=a.getAttribute('onclick')||'';
     if(fn.includes("go('"+id+"')")){a.classList.add('nav-active');}
   });
+  var titles={
+    'project-sys':'Shoot Your Short · Made In Black Studios CIC',
+    'project-exposure':'Exposure · Made In Black Studios CIC',
+    'project-postroom':'The Post Room · Made In Black Studios CIC',
+    'project-screenshorts':'Screenshorts · Made In Black Studios CIC'
+  };
+  if(titles[id]) document.title=titles[id];
   initFade();
 }
 function initFade(){
@@ -4432,12 +4719,37 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLightbox(); });
   }
 
+
+  // Clean URL deep links — supports /shootyourshort, /exposure, /postroom and other standalone page paths
+  var pathMap = {
+    '/shootyourshort':'project-sys', '/shoot-your-short':'project-sys', '/sys':'project-sys',
+    '/exposure':'project-exposure', '/postroom':'project-postroom', '/the-post-room':'project-postroom',
+    '/screenshorts':'project-screenshorts', '/screen-shorts':'project-screenshorts',
+    '/projects':'projects', '/community':'community', '/our-story':'about', '/story':'about', '/donate':'donate', '/waitlist':'apply'
+  };
+  var cleanPath = window.location.pathname.replace(/\/index\.html$/,'').replace(/\/$/,'') || '/';
+  if(!window.location.hash && pathMap[cleanPath]){
+    go(pathMap[cleanPath], true);
+  }
+
   // Deep link — /#apply, /#projects etc
   if (window.location.hash) {
     var id = window.location.hash.replace("#", "");
     var page = document.getElementById("page-" + id);
-    if (page) go(id);
+    if (page) go(id, true);
   }
+  window.addEventListener('popstate', function(){
+    var id = window.location.hash ? window.location.hash.replace('#','') : 'home';
+    if(document.getElementById('page-' + id)) go(id, true);
+  });
+
+
+  // Keyboard access for clickable project cards
+  document.querySelectorAll('.project-flow-card[role="button"]').forEach(function(card){
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); card.click(); }
+    });
+  });
 
   // ── Under-18 toggle ──
   var ageYes = document.querySelector('input[name="age_18_plus"][value="Yes"]');
